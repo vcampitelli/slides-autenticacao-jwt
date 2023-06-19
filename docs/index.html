@@ -9,29 +9,437 @@
 
         <link rel="stylesheet" href="reveal.js/dist/reset.css">
         <link rel="stylesheet" href="reveal.js/dist/reveal.css">
-        <link rel="stylesheet" href="reveal.js/dist/theme/black.css">
+        <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
+        <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+        <link rel="stylesheet" href="css/app.css">
 
-        <!-- Theme used for syntax highlighted code -->
-        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
-                <section>
+                <section id="first-slide" class="center">
                     <h1>O que você precisa saber sobre autenticação com JWT</h1>
-                    <h3 class="author"><span>Vinícius Campitelli</span></h3>
+                    <h2><span>Vinícius Campitelli</span></h2>
                 </section>
+
+                <section> <!-- Sobre mim -->
+                    <section class="center">
+                        <h2>Sobre mim</h2>
+                    </section>
+                    <section>
+                        <h2>Sobre mim</h2>
+                        <div id="about-me">
+                            <div class="text-center">
+                                <img src="img/profile.jpg" alt="Vinícius Campitelli" id="profile-pic">
+                            </div>
+                            <ul>
+                                <li>Desenvolvedor há 15 anos</li>
+                                <li>Entusiasta em cibersegurança</li>
+                                <li>Consultor de TI e instrutor de treinamentos</li>
+                            </ul>
+                            <div id="profile-name">Vinícius Campitelli</div>
+                            <div class="about-me-links">
+                                <div>
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                              class="fill"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Slides &amp; GitHub</p>
+                                        <a href="https://github.com/vcampitelli" target="_blank" rel="noopener">
+                                            vcampitelli
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                                              class="fill"></path>
+                                    </svg>
+                                    <div>
+                                        <p>Twitter</p>
+                                        <a href="https://twitter.com/vcampitelli" target="_blank" rel="noopener">
+                                            vcampitelli
+                                        </a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <svg role="img" viewBox="0 0 74 74" xmlns="http://www.w3.org/2000/svg">
+                                        <g fill="none" fill-rule="evenodd">
+                                            <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                                                  class="fill"/>
+                                            <path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                                                  class="fill-bg"/>
+                                        </g>
+                                    </svg>
+                                    <div>
+                                        <p>LinkedIn</p>
+                                        <a href="https://linkedin.com/in/viniciuscampitelli" target="_blank"
+                                           rel="noopener">
+                                            Vinícius Campitelli
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section> <!-- Sobre mim -->
+
+                <section> <!-- Família JOSE -->
+                    <section class="center">
+                        <h1>Família JOSE</h1>
+                    </section>
+                    <section>
+                        <h1>Família JOSE</h1>
+                        <b>J</b>SON <b>O</b>bject <b>S</b>igning and <b>E</b>ncryption
+                        <a href="https://www.iana.org/assignments/jose/jose.xhtml" target="_blank" rel="noopener"
+                            class="reference">
+                            iana.org
+                        </a>
+                    </section>
+                </section> <!-- Família JOSE -->
+
+                <section> <!-- JWT -->
+                    <section class="center">
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWT</h2>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWT</h2>
+                        <blockquote>
+                            JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred
+                            between two parties.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
+                           class="reference">RFC 7519</a>
+                    </section>
+                    <section data-auto-animate>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWT</h2>
+                        <blockquote>
+                            The claims in a JWT are encoded as a JSON object that is used as the
+                            payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
+                            (JWE) structure, enabling the claims to be digitally signed or integrity protected with a
+                            Message Authentication Code (MAC) and/or encrypted.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
+                           class="reference">RFC 7519</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWT</h2>
+                        <p>Exemplo de um JWT:</p>
+                        <div class="word-break line-height-sm mb-2">
+                            <code class="text-default smaller">
+                                eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
+                            </code>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>Fluxo de Autenticação com JWT</h2>
+                        <img src="img/flow.svg" id="svg-jwt-flow">
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>Por que usar JWT?</h2>
+                        <ul>
+                            <li>
+                                Maneira <em class="text-default">(relativamente)</em> segura para trocar informações de
+                                autenticação e autorização
+                            </li>
+                            <li>
+                                Gerenciamento de sessão <em>stateless</em>, já que o <em class="text-default">token</em>
+                                é auto-contido
+                            </li>
+                            <li>
+                                Once configured (establishes trust), backend doesn’t need to talk to
+                                authorization server
+                            </li>
+                            <!-- @FIXME -->
+                        </ul>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>Por que/quando não usar JWT?</h2>
+                        <ul>
+                            <li>
+                                Maior complexidade para lidar com revogação de <em>tokens</em>
+                            </li>
+                            <li>
+                                Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições
+                            </li>
+                        </ul>
+                    </section>
+                </section> <!-- JWT -->
+
+                <section> <!-- Padrões -->
+                    <section class="center">
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>Padrões</h2>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWS</h2>
+                        Assinatura
+                        <a href="https://www.rfc-editor.org/rfc/rfc7515.html" target="_blank" rel="noopener"
+                           class="reference">RFC 7515</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWS</h2>
+                        <p>Estrutura de um JWT <em>(utilizando JWS)</em>:</p>
+                        <div class="word-break line-height-sm mb-2">
+                            <code class="text-default smaller">
+                                <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
+                                    class="fragment highlight-green" data-fragment-index="1">eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0</span>.<span
+                                    class="fragment highlight-red" data-fragment-index="2">wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M</span>
+                            </code>
+                        </div>
+                        <div class="d-grid" style="grid-template-columns: auto auto">
+                            <span class="small fragment blue" data-fragment-index="0">Cabeçalho</span>
+                            <pre class="fragment m-0" data-fragment-index="0"><code>base64url({"alg": "HS256", "typ": "JWT"})</code></pre>
+                            <span class="small fragment green" data-fragment-index="1">Corpo</span>
+                            <pre class="fragment m-0" data-fragment-index="1"><code data-trim>
+                                base64url({
+                                    "iss": "viniciuscampitelli.com",
+                                    "aud": "palestras",
+                                    "sub": "autenticacao-jwt",
+                                    "iat": 1687427400
+                                })
+                            </code></pre>
+                            <span class="small fragment red" data-fragment-index="2">Assinatura</span>
+                            <pre class="fragment m-0" data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
+                        </div>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWE</h2>
+                        Criptografia
+                        <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener" class="reference">RFC 7516</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWE</h2>
+                        <code>
+                            eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0.AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw.W8n4sxRmfroCN65Z.Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA.P6rEnI71xYgqhdxDDuj8jA
+                        </code>
+                        <!-- @FIXME -->
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWA</h2>
+                        <blockquote>
+                            This specification registers cryptographic algorithms and identifiers to be used with the
+                            JSON Web Signature (JWS), JSON Web Encryption (JWE), and JSON Web Key (JWK) specifications.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWA</h2>
+                        <p>Algoritmos para JWS:</p>
+                        <table class="small">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <code>HS256</code><br>
+                                        <code>HS384</code><br>
+                                        <code>HS512</code>
+                                    </td>
+                                    <td>HMAC usando SHA-256, SHA-384 ou SHA-512</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>RS256</code><br>
+                                        <code>RS384</code><br>
+                                        <code>RS512</code>
+                                    </td>
+                                    <td>RSASSA-PKCS1-v1_5 usando SHA-256, SHA-384 ou SHA-512</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <code>ES256</code><br>
+                                        <code>ES384</code><br>
+                                        <code>ES512</code>
+                                    </td>
+                                    <td>
+                                        ECDSA usando P-256+SHA-256, P-384+SHA-384 ou P-521+SHA-512
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><code>none</code></td>
+                                    <td>Sem assinatura digital ou MAC ⚠️</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWA</h2>
+                        <p>Algoritmos para JWE:</p>
+                        <table class="small">
+                        </table>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>JWK e JWKS</h2>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener" class="reference">RFC 7517</a>
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Família JOSE</h1>
+                        <h2>Exemplos</h2>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7165" target="_blank" rel="noopener" class="reference">RFC 7165</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener" class="reference">RFC 7520</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7523" target="_blank" rel="noopener" class="reference">RFC 7523</a>
+                    </section>
+                </section> <!-- Padrões -->
+
+                <section> <!-- Claims -->
+                    <section class="center">
+                        <h1>Claims</h1>
+                    </section>
+                    <section>
+                        <h1>Claims</h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Claim</th>
+                                    <th>Significado</th>
+                                    <th>Descrição</th>
+                                    <th>Exemplo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>iss</code></td>
+                                    <td><em>Issuer</em></td>
+                                    <td>Serviço que emitiu o token</td>
+                                    <td><code class="small">viniciuscampitelli.com</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>aud</code></td>
+                                    <td><em>Audience</em></td>
+                                    <td>Recipiente do JWT</td>
+                                    <td><code class="small">codecon.dev</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>sub</code></td>
+                                    <td><em>Subject</em></td>
+                                    <td>Indivíduo para o JWT (autor)</td>
+                                    <td><code class="small"></code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>iat</code></td>
+                                    <td><em>Issued At</em></td>
+                                    <td><em>Timestamp</em> da geração do token</td>
+                                    <td><code class="small">1687427400</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>exp</code></td>
+                                    <td><em>Expiration Time</em></td>
+                                    <td><em>Timestamp</em> da expiração</td>
+                                    <td><code class="small">1687431600</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>nbf</code></td>
+                                    <td><em>Not Before</em></td>
+                                    <td><em>Timestamp</em> em que o token passa a ser válido</td>
+                                    <td><code class="small">1687428000</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>jti</code></td>
+                                    <td><em>JWT ID</em></td>
+                                    <td>Identificador do token (deve ser único e não repetível)</td>
+                                    <td><code class="small">54aa8d5a-8e30-41ac-8eef-e846eb362dbf</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        https://www.iana.org/assignments/jwt/jwt.xhtml#claims
+                    </section>
+                </section> <!-- Claims -->
+
+                <section> <!-- Boas práticas -->
+                    <section class="center">
+                        <h1>Boas práticas</h1>
+                    </section>
+                    <section>
+                        <h1>Boas práticas</h1>
+                        onde guardar? tempo de expiração? replay attack? como fazer logout? refresh tokens?
+                        <a href="https://www.rfc-editor.org/rfc/rfc8725" target="_blank" rel="noopener" class="reference">RFC 8725</a>
+
+                        https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf
+                        https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
+                    </section>
+                    <section>
+                        <h1 class="subtitle">Boas práticas</h1>
+                        <h2>Revogação</h2>
+                        <p>
+                            Bastante custoso e, na maioria dos casos, desnecessário
+                        </p>
+                        <p>
+                            Estratégia 1: para revogar um <em>token</em>, guarde o <code>jit</code> em algum lugar (de
+                            preferência, algo com acesso rápido em memória, como um Redis) com um tempo de expiração do
+                            mesmo do token e os serviços de negócio deveriam validar o <code>jti</code> ao receber um
+                            <em>token</em>
+                            Para revogar todos os tokens de um usuário, faça algo semelhante mas para o <code>sub</code>
+                            <!-- @FIXME -->
+                        </p>
+                        <p>
+                            Estratégia 2: usar uma arquitetura orientada a serviços para informar seus serviços que o
+                            <em>token</em> com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
+                            Prós: ?
+                            Contras: se houver muitos <kbd>Serviços de negócio</kbd>
+                        </p>
+                        <p>
+                            Estratégia 3: criar tokens com um tempo de expiração muito curto (alguns minutos, por
+                            exemplo) e
+                            Prós: toda a estratégia fica centralizada no <kbd>Servidor de autenticação</kbd>
+                            Contras: o usuário poderá acessar recursos até o tempo de expiração do <em>token</em>
+                        </p>
+                        https://auth0.com/blog/denylist-json-web-token-api-keys/
+                        https://devops.com/how-to-revoke-json-web-tokens-jwts/
+                    </section>
+                </section> <!-- Boas práticas -->
+
+                <section>
+                    jwt.io
+                    jwt.rocks
+                    <!-- @TODO token ou <em>token</em> -->
+                </section>
+
+                <section> <!-- Referências -->
+                    <section class="center">
+                        <h1>Referências</h1>
+                    </section>
+                </section> <!-- Referências -->
             </div>
         </div>
 
         <script src="reveal.js/dist/reveal.js"></script>
         <script src="reveal.js/plugin/highlight/highlight.js"></script>
         <script>
+            const $img = document.getElementById('svg-jwt-flow');
+            fetch($img.src)
+                .then(response => response.text())
+                .then(contents => {
+                    const $wrapper = document.createElement('div');
+                    $wrapper.innerHTML = contents;
+                    $img.parentNode.replaceChild($wrapper, $img);
+                });
             Reveal.initialize({
+                margin: 0.25,
                 hash: true,
                 mouseWheel: true,
                 slideNumber: 'c/t',
-                plugins: [ RevealHighlight ]
+                plugins: [RevealHighlight],
+                center: false,
             });
         </script>
     </body>
