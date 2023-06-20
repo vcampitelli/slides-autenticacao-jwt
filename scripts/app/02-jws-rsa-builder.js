@@ -19,7 +19,7 @@ const ask = () => {
 
         process.stdout.write(chalk.blue('Criando JWT... '));
         sign(
-            __dirname + '/data/02-jws-rsa.pem',
+            __dirname + '/data/02-jws-rsa.key',
             subject,
             process.env.JWT_ISSUER,
             process.env.JWT_AUDIENCE

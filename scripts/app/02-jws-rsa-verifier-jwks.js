@@ -12,7 +12,7 @@ ask(rl, function(jwt) {
     process.stdout.write(chalk.blue('Validando JWT com JWKS... '));
     verifyWithJwks(
         jwt,
-        __dirname + '/data/jwks.json',
+        __dirname + '/data/02-jwks.json',
         process.env.JWT_ISSUER,
         process.env.JWT_AUDIENCE,
     ).then((result) => {

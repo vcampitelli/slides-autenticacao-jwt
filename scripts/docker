@@ -1,0 +1,11 @@
+#!/bin/sh
+IMAGE_NAME="vcampitelli/scripts-jwt"
+VOLUME_NAME="vcampitelli-scripts-jwt"
+
+cd "$(dirname "$0")" || exit 1
+
+if [ "$(docker images -q ${IMAGE_NAME} 2> /dev/null)" = "" ]; then
+  docker build -t "${IMAGE_NAME}" .
+fi
+
+docker run --rm -v "${PWD}/app:/app" -v "${VOLUME_NAME}:/app/node_modules" -it "${IMAGE_NAME}" sh

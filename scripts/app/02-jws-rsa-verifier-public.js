@@ -12,7 +12,7 @@ ask(rl, function(jwt) {
     process.stdout.write(chalk.blue('Validando JWT com chave pública... '));
     verifyWithPublicKey(
         jwt,
-        __dirname + '/data/jwt.pem',
+        __dirname + '/data/02-jws-rsa.pem',
         process.env.JWT_ISSUER,
         process.env.JWT_AUDIENCE,
     ).then((result) => {
