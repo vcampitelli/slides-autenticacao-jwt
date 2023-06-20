@@ -10,12 +10,15 @@
         <link rel="stylesheet" href="reveal.js/dist/reset.css">
         <link rel="stylesheet" href="reveal.js/dist/reveal.css">
         <link rel="stylesheet" href="reveal.js/dist/theme/dracula.css">
-        <link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css">
+        <link rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/tokyo-night-dark.min.css"
+              integrity="sha512-dSQLLtgaq2iGigmy9xowRshaMzUHeiIUTvJW/SkUpb1J+ImXOPNGAI7ZC8V5/PiN/XN83B8uIk4qET7AMhdC5Q=="
+              crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <link rel="stylesheet" href="css/app.css">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="reveal">
@@ -96,7 +99,7 @@
                         <h1>Família JOSE</h1>
                         <b>J</b>SON <b>O</b>bject <b>S</b>igning and <b>E</b>ncryption
                         <a href="https://www.iana.org/assignments/jose/jose.xhtml" target="_blank" rel="noopener"
-                            class="reference">
+                           class="reference">
                             iana.org
                         </a>
                     </section>
@@ -104,107 +107,130 @@
 
                 <section> <!-- JWT -->
                     <section class="center">
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWT</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWT</h2>
+                        </header>
                     </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Família JOSE</h1>
+                    <section data-auto-anima
+                    <header>te>
+                        <h1>Família JOSE</h1>
                         <h2>JWT</h2>
-                        <blockquote>
-                            JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred
-                            between two parties.
-                        </blockquote>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
-                           class="reference">RFC 7519</a>
-                    </section>
-                    <section data-auto-animate>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWT</h2>
-                        <blockquote>
-                            The claims in a JWT are encoded as a JSON object that is used as the
-                            payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
-                            (JWE) structure, enabling the claims to be digitally signed or integrity protected with a
-                            Message Authentication Code (MAC) and/or encrypted.
-                        </blockquote>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
-                           class="reference">RFC 7519</a>
-                    </section>
-                    <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWT</h2>
-                        <p>Exemplo de um JWT:</p>
-                        <div class="word-break line-height-sm mb-2">
-                            <code class="text-default smaller">
-                                eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
-                            </code>
-                        </div>
-                    </section>
-                    <section>
-                        <h1 class="subtitle">Família JOSE</h1>
+                    </header>
+                    te>
+                    <blockquote>
+                        JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred
+                        between two parties.
+                    </blockquote>
+                    <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
+                       class="reference">RFC 7519</a>
+                </section>
+                <section data-auto-anima
+                <header>te>
+                    <h1>Família JOSE</h1>
+                    <h2>JWT</h2>
+                </header>
+                te>
+                <blockquote>
+                    The claims in a JWT are encoded as a JSON object that is used as the
+                    payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
+                    (JWE) structure, enabling the claims to be digitally signed or integrity protected with a
+                    Message Authentication Code (MAC) and/or encrypted.
+                </blockquote>
+                <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
+                   class="reference">RFC 7519</a>
+                </section>
+                <section data-auto-anima
+                <header>te>
+                    <h1>Família JOSE</h1>
+                    <h2>JWT</h2>
+                </header>
+                te>
+                <p>Exemplo de um JWT:</p>
+                <div class="word-break line-height-sm mb-4">
+                    <code class="color-link smaller">
+                        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
+                    </code>
+                </div>
+                </section>
+                <section>
+                    <header>
+                        <h1>Família JOSE</h1>
                         <h2>Fluxo de Autenticação com JWT</h2>
-                        <img src="img/flow.svg" id="svg-jwt-flow">
-                    </section>
-                    <section>
-                        <h1 class="subtitle">Família JOSE</h1>
+                    </header>
+                    <img src="img/flow.svg" id="svg-jwt-flow">
+                </section>
+                <section>
+                    <header>
+                        <h1>Família JOSE</h1>
                         <h2>Por que usar JWT?</h2>
-                        <ul>
-                            <li>
-                                Maneira <em class="text-default">(relativamente)</em> segura para trocar informações de
-                                autenticação e autorização
-                            </li>
-                            <li>
-                                Gerenciamento de sessão <em>stateless</em>, já que o <em class="text-default">token</em>
-                                é auto-contido
-                            </li>
-                            <li>
-                                Once configured (establishes trust), backend doesn’t need to talk to
-                                authorization server
-                            </li>
-                            <!-- @FIXME -->
-                        </ul>
-                    </section>
-                    <section>
-                        <h1 class="subtitle">Família JOSE</h1>
+                    </header>
+                    <ul>
+                        <li>
+                            Maneira <em class="color-default">(relativamente)</em> segura para trocar informações de
+                            autenticação e autorização
+                        </li>
+                        <li>
+                            Gerenciamento de sessão <em>stateless</em>, já que o <em class="color-default">token</em>
+                            é auto-contido
+                        </li>
+                        <li>
+                            Once configured (establishes trust), backend doesn’t need to talk to
+                            authorization server
+                        </li>
+                        <!-- @FIXME -->
+                    </ul>
+                </section>
+                <section>
+                    <header>
+                        <h1>Família JOSE</h1>
                         <h2>Por que/quando não usar JWT?</h2>
-                        <ul>
-                            <li>
-                                Maior complexidade para lidar com revogação de <em>tokens</em>
-                            </li>
-                            <li>
-                                Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições
-                            </li>
-                        </ul>
-                    </section>
+                    </header>
+                    <ul>
+                        <li>
+                            Maior complexidade para lidar com revogação de <em>tokens</em>
+                        </li>
+                        <li>
+                            Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições
+                        </li>
+                    </ul>
+                </section>
                 </section> <!-- JWT -->
 
                 <section> <!-- Padrões -->
                     <section class="center">
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>Padrões</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>Padrões</h2>
+                        </header>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWS</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWS</h2>
+                        </header>
                         Assinatura
                         <a href="https://www.rfc-editor.org/rfc/rfc7515.html" target="_blank" rel="noopener"
                            class="reference">RFC 7515</a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWS</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWS</h2>
+                        </header>
                         <p>Estrutura de um JWT <em>(utilizando JWS)</em>:</p>
-                        <div class="word-break line-height-sm mb-2">
-                            <code class="text-default smaller">
+                        <div class="word-break line-height-sm mb-4">
+                            <code class="color-default smaller">
                                 <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
                                     class="fragment highlight-green" data-fragment-index="1">eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0</span>.<span
                                     class="fragment highlight-red" data-fragment-index="2">wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M</span>
                             </code>
                         </div>
                         <div class="d-grid" style="grid-template-columns: auto auto">
-                            <span class="small fragment blue" data-fragment-index="0">Cabeçalho</span>
-                            <pre class="fragment m-0" data-fragment-index="0"><code>base64url({"alg": "HS256", "typ": "JWT"})</code></pre>
-                            <span class="small fragment green" data-fragment-index="1">Corpo</span>
-                            <pre class="fragment m-0" data-fragment-index="1"><code data-trim>
+                            <span class="small fragment color-blue" data-fragment-index="0">Cabeçalho</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="0"><code>base64url({"alg": "HS256", "typ": "JWT"})</code></pre>
+                            <span class="small fragment color-green" data-fragment-index="1">Corpo</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="1"><code data-trim>
                                 base64url({
                                     "iss": "viniciuscampitelli.com",
                                     "aud": "palestras",
@@ -212,92 +238,179 @@
                                     "iat": 1687427400
                                 })
                             </code></pre>
-                            <span class="small fragment red" data-fragment-index="2">Assinatura</span>
-                            <pre class="fragment m-0" data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
+                            <span class="small fragment color-red" data-fragment-index="2">Assinatura</span>
+                            <pre class="fragment mx-0 my-1"
+                                 data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
                         </div>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWE</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWE</h2>
+                        </header>
                         Criptografia
-                        <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener" class="reference">RFC 7516</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener"
+                           class="reference">RFC 7516</a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWE</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWE</h2>
+                        </header>
                         <code>
                             eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0.AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw.W8n4sxRmfroCN65Z.Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA.P6rEnI71xYgqhdxDDuj8jA
                         </code>
                         <!-- @FIXME -->
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWA</h2>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWA</h2>
+                        </header>
                         <blockquote>
                             This specification registers cryptographic algorithms and identifiers to be used with the
                             JSON Web Signature (JWS), JSON Web Encryption (JWE), and JSON Web Key (JWK) specifications.
                         </blockquote>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener"
+                           class="reference">RFC 7518</a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWA</h2>
-                        <p>Algoritmos para JWS:</p>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWA</h2>
+                        </header>
+                        <p>Alguns algoritmos para JWS:</p>
                         <table class="small">
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <code>HS256</code><br>
-                                        <code>HS384</code><br>
-                                        <code>HS512</code>
+                                    <td class="nowrap">
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">HS256</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">HS384</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">HS512</code>
                                     </td>
-                                    <td>HMAC usando SHA-256, SHA-384 ou SHA-512</td>
+                                    <td class="small">HMAC usando SHA-256, SHA-384 ou SHA-512</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <code>RS256</code><br>
-                                        <code>RS384</code><br>
-                                        <code>RS512</code>
+                                    <td class="nowrap">
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">RS256</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">RS384</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">RS512</code>
                                     </td>
-                                    <td>RSASSA-PKCS1-v1_5 usando SHA-256, SHA-384 ou SHA-512</td>
+                                    <td class="small">RSASSA-PKCS1-v1_5 usando SHA-256, SHA-384 ou SHA-512</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <code>ES256</code><br>
-                                        <code>ES384</code><br>
-                                        <code>ES512</code>
+                                    <td class="nowrap">
+                                        <code class="fragment custom underline" data-fragment-index="0">ES256</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">ES384</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">ES512</code>
                                     </td>
-                                    <td>
+                                    <td class="small">
                                         ECDSA usando P-256+SHA-256, P-384+SHA-384 ou P-521+SHA-512
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><code>none</code></td>
-                                    <td>Sem assinatura digital ou MAC ⚠️</td>
+                                    <td><code class="fragment semi-fade-out" data-fragment-index="0">none</span></code>
+                                    </td>
+                                    <td class="small">Sem assinatura digital ou MAC <span class="fragment"
+                                                                                          data-fragment-index="0">⚠</span>️
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518#section-3.1" target="_blank" rel="noopener"
+                           class="reference">
+                            RFC 7518: Section 3.1. "alg" (Algorithm) Header Parameter Values for JWS
+                        </a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWA</h2>
-                        <p>Algoritmos para JWE:</p>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWA</h2>
+                        </header>
+                        <p>Alguns algoritmos para JWE:</p>
                         <table class="small">
+                            <tbody>
+                                <tr>
+                                    <td class="nowrap">
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">RSA1_5</code>,
+                                        <code class="fragment custom underline" data-fragment-index="0">RSA-OAEP</code>
+                                    </td>
+                                    <td>
+                                        RSAES-PKCS1-v1_5 ou RSAES OAEP
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">A128KW</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">A192KW</code>,
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">A256KW</code>
+                                    </td>
+                                    <td>AES Key Wrap usando chaves de 128, 192 ou 256 bits</td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <code class="fragment custom underline" data-fragment-index="0">ECDH-ES</code>
+                                    </td>
+                                    <td>Curvas Elíptica de Diffie-Hellman Ephemeral Static key agreement using Concat
+                                        KDF
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="nowrap">
+                                        <code class="fragment semi-fade-out" data-fragment-index="0">dir</code>
+                                    </td>
+                                    <td>Uso direto da chave simétrica</td>
+                                </tr>
+                            </tbody>
                         </table>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener" class="reference">RFC 7518</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7518#section-4.1" target="_blank" rel="noopener"
+                           class="reference">
+                            RFC 7518: Section 4.1. "alg" (Algorithm) Header Parameter Values for JWE
+                        </a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>JWK e JWKS</h2>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener" class="reference">RFC 7517</a>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWK e JWKS</h2>
+                        </header>
+                        <blockquote>
+                            A JSON Web Key (JWK) is a JavaScript Object Notation (JSON) data structure that represents a
+                            cryptographic key. This specification also defines a JWK Set JSON data structure that
+                            represents a set of JWKs.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener"
+                           class="reference">RFC 7517</a>
                     </section>
                     <section>
-                        <h1 class="subtitle">Família JOSE</h1>
-                        <h2>Exemplos</h2>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7165" target="_blank" rel="noopener" class="reference">RFC 7165</a>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener" class="reference">RFC 7520</a>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7523" target="_blank" rel="noopener" class="reference">RFC 7523</a>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWK e JWKS</h2>
+                        </header>
+                        <p>JWKS do Facebook:</p>
+                        <pre><code class="json" data-trim>
+                            {
+                               "keys": [
+                                  {
+                                     "kid": "852b4c741351eedc6ec8ae783b98eeabe2157daa",
+                                     "kty": "RSA",
+                                     "alg": "RS256",
+                                     "use": "sig",
+                                     "n": "u0XiI326DxaxrD4eO9kt2B80M7NfPKcIx5AuwBj7gxVow3u8TSUr8xdycxcp_KNlKu5_MBpYOjY0CbnHM5GCiTAFI54xCRNlVTOE16f3FrSuE0ipMBw-njXO39q-BcTKGkF1Ey0hQ15AZYpaUXzFJTVC42nmnqP_TYSRBCtSTX1C2WGOuX8wOhJzzEmwcCS9VWpuSDVwtmz87c3eyn_XXtZKE8Gi2_Ibx_3K9p-RoXUhHwJrtvWqA_kz5s-zSTOU8-0hPhNwKI2Ep9juVvs_wnrvE8E0aJogNHcBodR6GvxWIkklz5yQwxe5RwrxtX71PAAynm4Kpp0KobH3A98avQ",
+                                     "e": "AQAB"
+                                  },
+                                  {
+                                     "kid": "370fa58a78d23043256a2cc580f1cf9ed3b9bbe7",
+                                     "kty": "RSA",
+                                     "alg": "RS256",
+                                     "use": "sig",
+                                     "n": "ylVSkbdJm-Q76nrrPpv7RaGlQVjRfxw5z9OwkM7qzFdUW15QJFrN8nozL21VnOs-2rAfsoctoA8aQVMmtuWsyeGIpdLrupMVsKqC9bS5_7CQFXRGhQbxsZN1WDU9PcyzQamqFMfOEl3Blj3gZr13TMHxaOB0IH6OeMDlzUGWIsbrX4_QyYXr2Wj8xNNdZ7NwmRrik0dFTBg_-TjTvBzV10WkhbnHT7Lukri1XSEKhjGqAeD0zfGaixhunx3PcFtuB5HNB9qdpkxMeDUG0oUZ3MX-WY5ppfYMBs8euR1OPG26BAcBM5j4OFuCy8zEv5ornodoa71Af-JbEdyr8smCyw",
+                                     "e": "AQAB"
+                                  }
+                               ]
+                            }
+                        </code></pre>
+                        <a href="https://www.facebook.com/.well-known/oauth/openid/jwks/" target="_blank" rel="noopener"
+                           class="reference">Facebook.com</a>
                     </section>
                 </section> <!-- Padrões -->
 
@@ -307,13 +420,12 @@
                     </section>
                     <section>
                         <h1>Claims</h1>
-                        <table>
+                        <table class="small">
                             <thead>
                                 <tr>
                                     <th>Claim</th>
                                     <th>Significado</th>
                                     <th>Descrição</th>
-                                    <th>Exemplo</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -321,47 +433,41 @@
                                     <td><code>iss</code></td>
                                     <td><em>Issuer</em></td>
                                     <td>Serviço que emitiu o token</td>
-                                    <td><code class="small">viniciuscampitelli.com</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>aud</code></td>
                                     <td><em>Audience</em></td>
                                     <td>Recipiente do JWT</td>
-                                    <td><code class="small">codecon.dev</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>sub</code></td>
                                     <td><em>Subject</em></td>
                                     <td>Indivíduo para o JWT (autor)</td>
-                                    <td><code class="small"></code></td>
                                 </tr>
                                 <tr>
                                     <td><code>iat</code></td>
                                     <td><em>Issued At</em></td>
                                     <td><em>Timestamp</em> da geração do token</td>
-                                    <td><code class="small">1687427400</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>exp</code></td>
                                     <td><em>Expiration Time</em></td>
                                     <td><em>Timestamp</em> da expiração</td>
-                                    <td><code class="small">1687431600</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>nbf</code></td>
                                     <td><em>Not Before</em></td>
                                     <td><em>Timestamp</em> em que o token passa a ser válido</td>
-                                    <td><code class="small">1687428000</code></td>
                                 </tr>
                                 <tr>
                                     <td><code>jti</code></td>
                                     <td><em>JWT ID</em></td>
-                                    <td>Identificador do token (deve ser único e não repetível)</td>
-                                    <td><code class="small">54aa8d5a-8e30-41ac-8eef-e846eb362dbf</code></td>
+                                    <td>Identificador único do token</td>
                                 </tr>
                             </tbody>
                         </table>
-                        https://www.iana.org/assignments/jwt/jwt.xhtml#claims
+                        <a href="https://www.iana.org/assignments/jwt/jwt.xhtml#claims" target="_blank" rel="noopener"
+                           class="reference">iana.org</a>
                     </section>
                 </section> <!-- Claims -->
 
@@ -372,14 +478,17 @@
                     <section>
                         <h1>Boas práticas</h1>
                         onde guardar? tempo de expiração? replay attack? como fazer logout? refresh tokens?
-                        <a href="https://www.rfc-editor.org/rfc/rfc8725" target="_blank" rel="noopener" class="reference">RFC 8725</a>
+                        <a href="https://www.rfc-editor.org/rfc/rfc8725" target="_blank" rel="noopener"
+                           class="reference">RFC 8725</a>
 
                         https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf
                         https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
                     </section>
                     <section>
-                        <h1 class="subtitle">Boas práticas</h1>
-                        <h2>Revogação</h2>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Revogação</h2>
+                        </header>
                         <p>
                             Bastante custoso e, na maioria dos casos, desnecessário
                         </p>
@@ -405,20 +514,44 @@
                         </p>
                         https://auth0.com/blog/denylist-json-web-token-api-keys/
                         https://devops.com/how-to-revoke-json-web-tokens-jwts/
+                        https://www.brunobrito.net.br/jose-jwt-jws-jwe-jwa-jwk-jwks/
+                    </section>
+                    <section>
+                        <h1>Boas práticas</h1>
+                        <ul class="margin">
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7165" target="_blank" rel="noopener">
+                                    RFC 7165: Use Cases and Requirements for JSON Object Signing and Encryption (JOSE)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
+                                    RFC 7520: Examples of Protecting Content Using JSON Object Signing and Encryption
+                                    (JOSE)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7523" target="_blank" rel="noopener">
+                                    RFC 7523: JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and
+                                    Authorization Grants
+                                </a>
+                            </li>
+                        </ul>
                     </section>
                 </section> <!-- Boas práticas -->
 
-                <section>
-                    jwt.io
-                    jwt.rocks
-                    <!-- @TODO token ou <em>token</em> -->
-                </section>
-
-                <section> <!-- Referências -->
+                <section> <!-- Materiais -->
                     <section class="center">
-                        <h1>Referências</h1>
+                        <h1>Materiais</h1>
                     </section>
-                </section> <!-- Referências -->
+                    <section>
+                        <h1>Materiais</h1>
+                        <ul>
+                            <li><a href="https://jwt.io" target="_blank" rel="noopener">jwt.io</a></li>
+                            <li><a href="https://jwt.rocks" target="_blank" rel="noopener">jwt.rocks</a></li>
+                        </ul>
+                    </section>
+                </section> <!-- Materiais -->
             </div>
         </div>
 
@@ -434,12 +567,11 @@
                     $img.parentNode.replaceChild($wrapper, $img);
                 });
             Reveal.initialize({
-                margin: 0.25,
                 hash: true,
                 mouseWheel: true,
                 slideNumber: 'c/t',
                 plugins: [RevealHighlight],
-                center: false,
+                // center: false,
             });
         </script>
     </body>
