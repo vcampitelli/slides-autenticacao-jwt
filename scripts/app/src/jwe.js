@@ -16,10 +16,6 @@ function doEncrypt(alg, secret, subject, issuer, audience) {
         .encrypt(secret);
 }
 
-export function jweDirEncrypt(secret, subject, issuer, audience) {
-    return doEncrypt('dir', secret, subject, issuer, audience);
-}
-
 /**
  *
  * @param privateKeyPath

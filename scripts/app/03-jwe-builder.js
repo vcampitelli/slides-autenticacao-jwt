@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import {jweDirEncrypt, jweEncrypt} from './src/jwe.js';
+import {jweEncrypt} from './src/jwe.js';
 import {createInterface} from 'node:readline';
 import __dirname from './src/dirname.js';
 
@@ -20,7 +20,7 @@ const ask = () => {
         process.stdout.write(chalk.blue('Criando JWT... '));
         const jwt = jweEncrypt(
             __dirname + '/data/03-jwe-ec.pem',
-            'ec',
+            'x25519',
             subject,
             process.env.JWT_ISSUER,
             process.env.JWT_AUDIENCE,
@@ -34,7 +34,6 @@ const ask = () => {
             console.error(err);
         }).finally(() => {
             rl.close();
-            console.log('@TODO dir encryption');
         });
     });
 };
