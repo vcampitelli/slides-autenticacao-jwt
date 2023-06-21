@@ -29,14 +29,14 @@ td,
 }
 
 /* Primeiro slide */
-#first-slide > h1 {
+section#first > h1 {
   margin-bottom: 20px;
   font-weight: 900;
   background: linear-gradient(90deg, var(--r-heading-color), var(--r-link-color-dark));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-#first-slide > h2 {
+section#first > h2 {
   color: var(--r-link-color-hover) !important;
   --r-heading2-size: 1.3em;
 }
@@ -151,6 +151,9 @@ header > h2 {
 .fw-bold {
   font-weight: bold;
 }
+.fs-italic {
+  font-style: italic;
+}
 .word-break {
   word-break: break-all;
 }
@@ -174,7 +177,7 @@ header > h2 {
 }
 kbd {
   letter-spacing: -1px;
-  color: #c8c8c2;
+  color: #b8b8b2;
 }
 .reference {
   display: block;
@@ -202,7 +205,6 @@ kbd {
 .color-violet {
   color: var(--color-violet);
 }
-em,
 .color-default {
   color: var(--r-main-color) !important;
 }
@@ -211,6 +213,7 @@ em,
 }
 
 /* Margens */
+table,
 .mx-0 {
   margin-left: 0 !important;
   margin-right: 0 !important;
@@ -231,7 +234,7 @@ code {
   font-size: 0.9em;
 }
 code.font-size-sm {
-  font-size: 0.7em;
+  font-size: 0.75em;
 }
 code.font-size-xs {
   font-size: 0.45em;
@@ -285,8 +288,15 @@ svg {
 }
 
 /* Listas */
-ul.margin > li + li {
-  margin-top: 0.75em;
+ul.margin > li {
+  margin-bottom: 0.75em;
+}
+li > ul {
+  margin-top: 0.5em !important;
+  margin-bottom: 0.5em !important;
+}
+ul.margin-sm > li {
+  margin-bottom: 0.5em;
 }
 .reveal ul {
   list-style: disc outside;

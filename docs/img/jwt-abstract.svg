@@ -1,0 +1,87 @@
+<svg version="1.1" baseProfile="full" width="432.0" height="340.0" viewbox="0 0 432 340" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events">
+		<desc >#arrowSize: 0.5
+	#fill: #fdf6e3
+	#gutter: 0
+	#stroke: #181a26
+	#font: Lato
+	#lineWidth: 2
+	#padding: 16
+	#spacing: 80
+	#.reference: title=bold dashed
+	[&lt;reference&gt; JWT|Classe abstrata]
+	[JWT]--:&gt;[JWS|Implementação]
+	[JWT]--:&gt;[JWE|Implementação]</desc>
+	<g stroke-width="1.0" text-align="left" font="12pt Helvetica, Arial, sans-serif" font-size="12pt" font-family="Lato" font-weight="normal" font-style="normal">
+			<g font-family="Lato" font-size="12pt" font-weight="bold" font-style="normal" stroke-width="2.0" stroke-linejoin="round" stroke-linecap="round" stroke="#686a76">
+				<g stroke="transparent" fill="transparent">
+					<rect x="0.0" y="0.0" height="340.0" width="432.0" stroke="none"></rect>
+				</g>
+			<g transform="translate(16, 16)" fill="#181a26">
+					<g transform="translate(20, 20)" fill="#fdf6e3" font-family="Lato" font-size="12pt" font-weight="normal" font-style="normal">
+						<g stroke-dasharray="4 4" class="fragment fade-down" data-fragment-index="0">
+							<path d="M120.6 94.0 L70 134 L70 160.66666666666666 L70.0 160.7 " fill="none"></path>
+						</g>
+					<path d="M64.7 160.7 L70.0 160.7 L75.3 160.7 L70.0 174.0 Z" class="fragment fade-down" data-fragment-index="0"></path>
+					<g stroke-dasharray="4 4" class="fragment fade-down" data-fragment-index="1">
+							<path d="M239.4 94.0 L290 134 L290 160.66666666666666 L290.0 160.7 " fill="none"></path>
+						</g>
+					<path d="M284.7 160.7 L290.0 160.7 L295.3 160.7 L290.0 174.0 Z" class="fragment fade-down" data-fragment-index="1"></path>
+					<g data-name="JWT">
+							<g fill="#fdf6e3" stroke="#686a76" stroke-dasharray="4 4" data-name="JWT">
+								<rect x="110.5" y="0.0" height="94.0" width="139.0" data-name="JWT"></rect>
+							<path d="M110.5 47.0 L249.5 47.0" fill="none" data-name="JWT"></path>
+							</g>
+						<g transform="translate(110.5, 0)" font-family="Lato" font-size="12pt" font-weight="bold" font-style="normal" data-name="JWT">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="center" data-name="JWT">
+									<text x="53.5" y="13.5" stroke="none" text-anchor="middle" data-name="JWT">JWT</text>
+								
+								</g>
+							</g>
+						<g transform="translate(110.5, 47)" font-family="Lato" font-size="12pt" font-weight="normal" font-style="normal" data-name="JWT">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="left" data-name="JWT">
+									<text x="0.0" y="13.5" stroke="none" data-name="JWT">Classe abstrata</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="JWS" class="fragment fade-down" data-fragment-index="0">
+							<g fill="#fdf6e3" stroke="#686a76" data-name="JWS">
+								<rect x="0.0" y="174.0" height="94.0" width="140.0" data-name="JWS"></rect>
+							<path d="M0.0 221.0 L140.0 221.0" fill="none" data-name="JWS"></path>
+							</g>
+						<g transform="translate(0, 174)" font-family="Lato" font-size="12pt" font-weight="bold" font-style="normal" data-name="JWS">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="center" data-name="JWS">
+									<text x="54.0" y="13.5" stroke="none" text-anchor="middle" data-name="JWS">JWS</text>
+								
+								</g>
+							</g>
+						<g transform="translate(0, 221)" font-family="Lato" font-size="12pt" font-weight="normal" font-style="normal" data-name="JWS">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="left" data-name="JWS">
+									<text x="0.0" y="13.5" stroke="none" data-name="JWS">Implementação</text>
+								
+								</g>
+							</g>
+						</g>
+					<g data-name="JWE" class="fragment fade-down" data-fragment-index="1">
+							<g fill="#fdf6e3" stroke="#686a76" data-name="JWE">
+								<rect x="220.0" y="174.0" height="94.0" width="140.0" data-name="JWE"></rect>
+							<path d="M220.0 221.0 L360.0 221.0" fill="none" data-name="JWE"></path>
+							</g>
+						<g transform="translate(220, 174)" font-family="Lato" font-size="12pt" font-weight="bold" font-style="normal" data-name="JWE">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="center" data-name="JWE">
+									<text x="54.0" y="13.5" stroke="none" text-anchor="middle" data-name="JWE">JWE</text>
+								
+								</g>
+							</g>
+						<g transform="translate(220, 221)" font-family="Lato" font-size="12pt" font-weight="normal" font-style="normal" data-name="JWE">
+								<g transform="translate(16, 16)" fill="#181a26" text-align="left" data-name="JWE">
+									<text x="0.0" y="13.5" stroke="none" data-name="JWE">Implementação</text>
+								
+								</g>
+							</g>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</svg>
