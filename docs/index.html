@@ -18,14 +18,14 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="reveal">
             <div class="slides">
                 <section id="first-slide" class="center">
                     <h1>O que você precisa saber sobre autenticação com JWT</h1>
-                    <h2><span>Vinícius Campitelli</span></h2>
+                    <h2>Vinícius Campitelli</h2>
                 </section>
 
                 <section> <!-- Sobre mim -->
@@ -112,89 +112,85 @@
                             <h2>JWT</h2>
                         </header>
                     </section>
-                    <section data-auto-anima
-                    <header>te>
-                        <h1>Família JOSE</h1>
-                        <h2>JWT</h2>
-                    </header>
-                    te>
-                    <blockquote>
-                        JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred
-                        between two parties.
-                    </blockquote>
-                    <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
-                       class="reference">RFC 7519</a>
-                </section>
-                <section data-auto-anima
-                <header>te>
-                    <h1>Família JOSE</h1>
-                    <h2>JWT</h2>
-                </header>
-                te>
-                <blockquote>
-                    The claims in a JWT are encoded as a JSON object that is used as the
-                    payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
-                    (JWE) structure, enabling the claims to be digitally signed or integrity protected with a
-                    Message Authentication Code (MAC) and/or encrypted.
-                </blockquote>
-                <a href="https://www.rfc-editor.org/rfc/rfc7519.html" target="_blank" rel="noopener"
-                   class="reference">RFC 7519</a>
-                </section>
-                <section data-auto-anima
-                <header>te>
-                    <h1>Família JOSE</h1>
-                    <h2>JWT</h2>
-                </header>
-                te>
-                <p>Exemplo de um JWT:</p>
-                <div class="word-break line-height-sm mb-4">
-                    <code class="color-link smaller">
-                        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
-                    </code>
-                </div>
-                </section>
-                <section>
-                    <header>
-                        <h1>Família JOSE</h1>
-                        <h2>Fluxo de Autenticação com JWT</h2>
-                    </header>
-                    <img src="img/flow.svg" id="svg-jwt-flow">
-                </section>
-                <section>
-                    <header>
-                        <h1>Família JOSE</h1>
-                        <h2>Por que usar JWT?</h2>
-                    </header>
-                    <ul>
-                        <li>
-                            Maneira <em class="color-default">(relativamente)</em> segura para trocar informações de
-                            autenticação e autorização
-                        </li>
-                        <li>
-                            Gerenciamento de sessão <em>stateless</em>, já que o <em class="color-default">token</em>
-                            é auto-contido
-                        </li>
-                        <li>
-                            Once configured (establishes trust), backend doesn’t need to talk to
-                            authorization server
-                        </li>
-                        <!-- @FIXME -->
-                    </ul>
-                </section>
-                <section>
-                    <header>
-                        <h1>Família JOSE</h1>
-                        <h2>Por que/quando não usar JWT?</h2>
-                    </header>
-                    <ul>
-                        <li>
-                            Maior complexidade para lidar com revogação de <em>tokens</em>
-                        </li>
-                        <li>
-                            Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições
-                        </li>
-                    </ul>
-                </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWT</h2>
+                        </header>
+                        <blockquote>
+                            JSON Web Token (JWT) is a compact, URL-safe means of representing claims to be transferred
+                            between two parties.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener"
+                           class="reference">RFC 7519</a>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWT</h2>
+                        </header>
+                        <blockquote>
+                            The claims in a JWT are encoded as a JSON object that is used as the
+                            payload of a JSON Web Signature (JWS) structure or as the plaintext of a JSON Web Encryption
+                            (JWE) structure, enabling the claims to be digitally signed or integrity protected with a
+                            Message Authentication Code (MAC) and/or encrypted.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener"
+                           class="reference">RFC 7519</a>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>JWT</h2>
+                        </header>
+                        <p>Exemplo de um JWT:</p>
+                        <div class="word-break line-height-sm mb-4">
+                            <code class="color-link font-size-sm">
+                                eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
+                            </code>
+                        </div>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>Fluxo de Autenticação com JWT</h2>
+                        </header>
+                        <img src="img/flow.svg" id="svg-jwt-flow">
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>Por que usar JWT?</h2>
+                        </header>
+                        <ul class="margin">
+                            <li>
+                                Maneira <em>(relativamente)</em> segura para trocar informações de
+                                autenticação e autorização
+                            </li>
+                            <li>
+                                Gerenciamento de sessão <em>stateless</em>, já que o
+                                <em>token</em> é auto-contido
+                            </li>
+                            <li>
+                                Diminui gargalo no <kbd>Serviço de autenticação</kbd>, já que os outros serviços são
+                                capazes de validar o <em>token</em> sem acessá-lo
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Família JOSE</h1>
+                            <h2>Por que/quando não usar JWT?</h2>
+                        </header>
+                        <ul class="margin">
+                            <li>
+                                Maior complexidade para lidar com revogação de <em>tokens</em>
+                            </li>
+                            <li>
+                                Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições
+                            </li>
+                        </ul>
+                    </section>
                 </section> <!-- JWT -->
 
                 <section> <!-- Padrões -->
@@ -209,8 +205,11 @@
                             <h1>Família JOSE</h1>
                             <h2>JWS</h2>
                         </header>
-                        Assinatura
-                        <a href="https://www.rfc-editor.org/rfc/rfc7515.html" target="_blank" rel="noopener"
+                        <blockquote>
+                            JSON Web Signature (JWS) represents content secured with digital signatures or Message
+                            Authentication Codes (MACs) using JSON-based data structures.
+                        </blockquote>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7515" target="_blank" rel="noopener"
                            class="reference">RFC 7515</a>
                     </section>
                     <section>
@@ -220,25 +219,25 @@
                         </header>
                         <p>Estrutura de um JWT <em>(utilizando JWS)</em>:</p>
                         <div class="word-break line-height-sm mb-4">
-                            <code class="color-default smaller">
+                            <code class="color-default font-size-sm">
                                 <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
                                     class="fragment highlight-green" data-fragment-index="1">eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0</span>.<span
                                     class="fragment highlight-red" data-fragment-index="2">wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M</span>
                             </code>
                         </div>
-                        <div class="d-grid" style="grid-template-columns: auto auto">
-                            <span class="small fragment color-blue" data-fragment-index="0">Cabeçalho</span>
+                        <div class="d-grid half-columns">
+                            <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="0"><code>base64url({"alg": "HS256", "typ": "JWT"})</code></pre>
-                            <span class="small fragment color-green" data-fragment-index="1">Corpo</span>
+                            <span class="font-size-sm fragment color-green" data-fragment-index="1">Corpo</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="1"><code data-trim>
                                 base64url({
-                                    "iss": "viniciuscampitelli.com",
-                                    "aud": "palestras",
-                                    "sub": "autenticacao-jwt",
-                                    "iat": 1687427400
+                                  "iss": "viniciuscampitelli.com",
+                                  "aud": "palestras",
+                                  "sub": "autenticacao-jwt",
+                                  "iat": 1687427400
                                 })
                             </code></pre>
-                            <span class="small fragment color-red" data-fragment-index="2">Assinatura</span>
+                            <span class="font-size-sm fragment color-red" data-fragment-index="2">Assinatura</span>
                             <pre class="fragment mx-0 my-1"
                                  data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
                         </div>
@@ -248,7 +247,9 @@
                             <h1>Família JOSE</h1>
                             <h2>JWE</h2>
                         </header>
-                        Criptografia
+                        <blockquote>
+                            JSON Web Encryption (JWE) represents encrypted content using JSON-based data structures.
+                        </blockquote>
                         <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener"
                            class="reference">RFC 7516</a>
                     </section>
@@ -257,10 +258,46 @@
                             <h1>Família JOSE</h1>
                             <h2>JWE</h2>
                         </header>
-                        <code>
-                            eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0.AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw.W8n4sxRmfroCN65Z.Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA.P6rEnI71xYgqhdxDDuj8jA
-                        </code>
-                        <!-- @FIXME -->
+                        <p>Estrutura de um JWT <em>(utilizando JWE)</em>:</p>
+                        <div class="word-break line-height-xs mb-4">
+                            <code class="color-default font-size-xs">
+                                <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
+                                    class="fragment highlight-green" data-fragment-index="1">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
+                                    class="fragment highlight-red" data-fragment-index="2">W8n4sxRmfroCN65Z</span>.<span
+                                    class="fragment highlight-cyan custom" data-fragment-index="3">Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA</span>.<span
+                                    class="fragment highlight-violet custom" data-fragment-index="4">P6rEnI71xYgqhdxDDuj8jA</span>
+                            </code>
+                        </div>
+                        <div class="d-grid half-columns">
+                            <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="0"><code
+                                    class="javascript font-size-sm line-height-normal word-break" data-trim>
+                                base64url({"alg": "ECDH-ES+A256KW", "enc": "A256GCM", "epk": {"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
+                            </code></pre>
+                            <span class="font-size-sm fragment color-green" data-fragment-index="1">Chave</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="1">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(key)</code>
+                            </pre>
+                            <span class="font-size-sm fragment color-red" data-fragment-index="2">IV</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="2">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(iv)</code>
+                            </pre>
+                            <span class="font-size-sm fragment color-cyan" data-fragment-index="3">Corpo</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="3">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>
+                                    base64url(encrypt({
+                                      "iat": 1687136586,
+                                      "sub": "autenticacao-jwt",
+                                      "iss": "viniciuscampitelli.com",
+                                      "aud": "palestras",
+                                      "exp": 1687140186
+                                    }, key))
+                            </code></pre>
+                            <span class="font-size-sm fragment color-violet" data-fragment-index="4">Tag</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="4">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(tag)</code>
+                            </pre>
+                        </div>
                     </section>
                     <section>
                         <header>
@@ -280,7 +317,7 @@
                             <h2>JWA</h2>
                         </header>
                         <p>Alguns algoritmos para JWS:</p>
-                        <table class="small">
+                        <table class="font-size-sm">
                             <tbody>
                                 <tr>
                                     <td class="nowrap">
@@ -288,7 +325,7 @@
                                         <code class="fragment semi-fade-out" data-fragment-index="0">HS384</code>,
                                         <code class="fragment semi-fade-out" data-fragment-index="0">HS512</code>
                                     </td>
-                                    <td class="small">HMAC usando SHA-256, SHA-384 ou SHA-512</td>
+                                    <td class="font-size-sm">HMAC usando SHA-256, SHA-384 ou SHA-512</td>
                                 </tr>
                                 <tr>
                                     <td class="nowrap">
@@ -296,7 +333,7 @@
                                         <code class="fragment semi-fade-out" data-fragment-index="0">RS384</code>,
                                         <code class="fragment semi-fade-out" data-fragment-index="0">RS512</code>
                                     </td>
-                                    <td class="small">RSASSA-PKCS1-v1_5 usando SHA-256, SHA-384 ou SHA-512</td>
+                                    <td class="font-size-sm">RSASSA-PKCS1-v1_5 usando SHA-256, SHA-384 ou SHA-512</td>
                                 </tr>
                                 <tr>
                                     <td class="nowrap">
@@ -304,19 +341,22 @@
                                         <code class="fragment semi-fade-out" data-fragment-index="0">ES384</code>,
                                         <code class="fragment semi-fade-out" data-fragment-index="0">ES512</code>
                                     </td>
-                                    <td class="small">
+                                    <td class="font-size-sm">
                                         ECDSA usando P-256+SHA-256, P-384+SHA-384 ou P-521+SHA-512
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><code class="fragment semi-fade-out" data-fragment-index="0">none</span></code>
-                                    </td>
-                                    <td class="small">Sem assinatura digital ou MAC <span class="fragment"
+                                    <td><code class="fragment semi-fade-out" data-fragment-index="0">none</code></td>
+                                    <td class="font-size-sm">Sem assinatura digital ou MAC <span class="fragment"
                                                                                           data-fragment-index="0">⚠</span>️
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
+                        <p class="fragment font-size-xs" data-fragment-index="0">
+                            * <code class="fragment custom underline vertical-middle" data-fragment-index="0">Algoritmo
+                            recomendado</code>
+                        </p>
                         <a href="https://www.rfc-editor.org/rfc/rfc7518#section-3.1" target="_blank" rel="noopener"
                            class="reference">
                             RFC 7518: Section 3.1. "alg" (Algorithm) Header Parameter Values for JWS
@@ -328,7 +368,7 @@
                             <h2>JWA</h2>
                         </header>
                         <p>Alguns algoritmos para JWE:</p>
-                        <table class="small">
+                        <table class="font-size-sm">
                             <tbody>
                                 <tr>
                                     <td class="nowrap">
@@ -363,6 +403,10 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <p class="fragment font-size-xs" data-fragment-index="0">
+                            * <code class="fragment custom underline vertical-middle" data-fragment-index="0">Algoritmos
+                            recomendados</code>
+                        </p>
                         <a href="https://www.rfc-editor.org/rfc/rfc7518#section-4.1" target="_blank" rel="noopener"
                            class="reference">
                             RFC 7518: Section 4.1. "alg" (Algorithm) Header Parameter Values for JWE
@@ -420,7 +464,7 @@
                     </section>
                     <section>
                         <h1>Claims</h1>
-                        <table class="small">
+                        <table class="font-size-sm">
                             <thead>
                                 <tr>
                                     <th>Claim</th>
@@ -457,7 +501,7 @@
                                 <tr>
                                     <td><code>nbf</code></td>
                                     <td><em>Not Before</em></td>
-                                    <td><em>Timestamp</em> em que o token passa a ser válido</td>
+                                    <td><em>Timestamp</em> em que o <em>token</em> passa a ser válido</td>
                                 </tr>
                                 <tr>
                                     <td><code>jti</code></td>
@@ -476,66 +520,266 @@
                         <h1>Boas práticas</h1>
                     </section>
                     <section>
-                        <h1>Boas práticas</h1>
-                        onde guardar? tempo de expiração? replay attack? como fazer logout? refresh tokens?
-                        <a href="https://www.rfc-editor.org/rfc/rfc8725" target="_blank" rel="noopener"
-                           class="reference">RFC 8725</a>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Algoritmos</h2>
+                        </header>
+                        <ul>
+                            <li>JWS: ES256 com JWKS se você tiver muitos serviços, HMAC Se você tiver poucos</li>
+                            <li>JWE: ?</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Refresh tokens</h2>
+                        </header>
+                        <!-- @FIXME -->
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Expiração</h2>
+                        </header>
+                        <p class="fw-bold">Para comunicação entre serviços:</p>
+                        <p>
+                            Utilize um tempo de expiração curto (por exemplo, 15 minutos)
+                        </p>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Expiração</h2>
+                        </header>
+                        <p class="fw-bold">Para usuários de aplicações Web:</p>
+                        <p>
+                            Set the <em>token</em> expiration to one week and refresh the <em>token</em> every time the user opens the web
+                            application and every one hour. If a user doesn't open the application for more than a week,
+                            they will have to login again and this is acceptable web application UX.
+                        </p>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Expiração</h2>
+                        </header>
+                        <p>
+                            Para usuários: ???
+                        </p>
+                        <p>
+                            Para apps: talvez JWT não seja a melhor escolha, e sim <em>tokens</em> opacos
+                        </p>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>?</h2>
+                        </header>
+                        replay attack?
+                        refresh tokens?
+                        HTTPS
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Chaves</h2>
+                        </header>
+                        <p>
+                        A key of the same size as the hash output (for instance, 256 bits for “HS256”) or larger MUST be used with this algorithm.
 
-                        https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf
-                        https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/
+                        The minimum key length for RSA:
+
+                        A key of size 2048 bits or larger MUST be used with these algorithms.
+                        </p>
+                        <p>
+                            Rotação de chaves
+                        </p>
+                        <!-- Fixme -->
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Onde guardar?</h2>
+                        </header>
+
+                        <p class="fw-bold">Em aplicações Web:</p>
+                        <p>
+                            Estratégia 1: guardar o <em>token</em> somente em memória em seu
+                            código JavaScript, podendo também utilizar <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API" target="_blank"
+                                rel="noopener">Web Workers</a> para salvá-lo
+                        </p>
+                        <a href="https://thenewstack.io/leveraging-web-workers-to-safely-store-access-tokens/"
+                           target="_blank" rel="noopener" class="reference">
+                            The New Stack: Leveraging Web Workers to Safely Store Access Tokens
+                        </a>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Onde guardar?</h2>
+                        </header>
+
+                        <p class="fw-bold">Em aplicações Web:</p>
+                        <p>
+                            Estratégia 2: utilizar <code>Cookie</code> (e não <code>LocalStorage</code>) com as
+                            <em>flags</em>:
+                        </p>
+                        <ul>
+                            <li><code>Secure</code> para apenas trafegar em HTTPS</li>
+                            <li><code>HttpOnly</code> para impedir acesso via JavaScript</li>
+                            <li>
+                                <code>SameSite</code> como <code>Strict</code> para permiti-lo apenas em seu domínio
+                            </li>
+                        </ul>
+                        <a href="https://auth0.com/docs/secure/security-guidance/data-security/token-storage"
+                           target="_blank" rel="noopener" class="reference">
+                            Auth0: Token Storage
+                        </a>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Onde guardar?</h2>
+                        </header>
+
+                        <p class="fw-bold">Em aplicações Mobile:</p>
+                        <p>
+                            Guarde o <em>token</em> no armazenamento seguro da plataforma, como o
+                            <a href="https://developer.android.com/reference/android/content/SharedPreferences"
+                               target="_blank" rel="noopener"><code>SharedPreferences</code></a> no Android ou
+                            <a href="https://developer.apple.com/documentation/security/keychain_services"
+                               target="_blank" rel="noopener"><code>Keychain</code></a> no iOS
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Validação</h2>
+                        </header>
+                        <p>Ao receber um <em>token</em>, certifique-se de...</p>
+                        <ul>
+                            <li class="fragment">
+                                Verificar o algoritmo (e que não está permitindo <code>none</code>)
+                            </li>
+                            <li class="fragment">
+                                Validar as <em>claims</em> esperadas (<code>iss</code>, <code>aud</code>,
+                                <code>sub</code> e outros campos)
+                            </li>
+                            <li class="fragment">
+                                O <em>token</em> é válido (<code>nbf</code> e <code>exp</code>)
+                            </li>
+                            <li class="fragment">O <em>token</em> não está revogado (consultar <em>blacklist</em>)</li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate data-auto-animate-restart>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p>
+                            Um dos maiores contras de se utilizar JWT, pois geralmente é bastante custoso
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 1:</p>
+                        <p data-id="desc">
+                            Guarde o <code>jti</code> do <em>token</em> em algum armazenamento e garanta que os
+                            <kbd>Serviços de negócio</kbd> o consultem. Para revogar todos os <em>tokens</em> de um
+                            usuário, faça o mesmo para o <code>sub</code>.
+                        </p>
+                        <div class="fragment alert" data-id="nota">
+                            Nota: você só precisa guardar aquela informação até a data de expiração do <em>token</em>,
+                            então se usar algo em memória (como Redis ou memcached), você pode utilizar a própria
+                            funcionalidade de <em>time-to-live</em> do serviço
+                        </div>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 1:</p>
+                        <p data-id="pros">
+                            <span class="fw-bold">Prós:</span> menor complexidade arquitetural
+                        </p>
+                        <p data-id="contras" class="fw-bold">Contras:</p>
+                        <ul>
+                            <li>
+                                Inviável se houver muitos <kbd>Serviços de negócio</kbd> (ou se são clientes)
+                            </li>
+                            <li>Pode criar gargalos no armazenamento</li>
+                        </ul>
                     </section>
                     <section>
                         <header>
                             <h1>Boas práticas</h1>
                             <h2>Revogação</h2>
                         </header>
+                        <p class="fw-bold">Estratégia 2:</p>
                         <p>
-                            Bastante custoso e, na maioria dos casos, desnecessário
+                            Usar uma arquitetura orientada a eventos para informar seus serviços que o <em>token</em>
+                            com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
                         </p>
                         <p>
-                            Estratégia 1: para revogar um <em>token</em>, guarde o <code>jit</code> em algum lugar (de
-                            preferência, algo com acesso rápido em memória, como um Redis) com um tempo de expiração do
-                            mesmo do token e os serviços de negócio deveriam validar o <code>jti</code> ao receber um
-                            <em>token</em>
-                            Para revogar todos os tokens de um usuário, faça algo semelhante mas para o <code>sub</code>
-                            <!-- @FIXME -->
+                            <span class="fw-bold">Prós:</span> mantém o JWT totalmente <em>stateless</em>
                         </p>
-                        <p>
-                            Estratégia 2: usar uma arquitetura orientada a serviços para informar seus serviços que o
-                            <em>token</em> com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
-                            Prós: ?
-                            Contras: se houver muitos <kbd>Serviços de negócio</kbd>
-                        </p>
-                        <p>
-                            Estratégia 3: criar tokens com um tempo de expiração muito curto (alguns minutos, por
-                            exemplo) e
-                            Prós: toda a estratégia fica centralizada no <kbd>Servidor de autenticação</kbd>
-                            Contras: o usuário poderá acessar recursos até o tempo de expiração do <em>token</em>
-                        </p>
-                        https://auth0.com/blog/denylist-json-web-token-api-keys/
-                        https://devops.com/how-to-revoke-json-web-tokens-jwts/
-                        https://www.brunobrito.net.br/jose-jwt-jws-jwe-jwa-jwk-jwks/
+                        <p class="fw-bold">Contras:</p>
+                        <ul>
+                            <li>
+                                Inviável se houver muitos <kbd>Serviços de negócio</kbd> (ou se são clientes)
+                            </li>
+                            <li>Pode criar gargalos no armazenamento</li>
+                        </ul>
                     </section>
-                    <section>
-                        <h1>Boas práticas</h1>
-                        <ul class="margin">
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 3:</p>
+                        <p>
+                            Criar o JWT com um tempo de expiração muito curto (alguns minutos, por exemplo) e o
+                            <em>refresh token</em> com um tempo maior (uma semana ou mais)
+                        </p>
+                        <p>
+                            <span class="fw-bold">Prós:</span> toda a estratégia fica centralizada no <kbd>Servidor de
+                            autenticação</kbd>
+                        </p>
+                        <p>
+                            <span class="fw-bold">Contras:</span> o usuário poderá acessar recursos até o tempo de
+                            expiração do <em>token</em>
+                        </p>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Em microsserviços</h2>
+                        </header>
+                        <ul>
+                            <li>Valide o <em>token</em> em seu API Gateway para nem precisar encaminhar a requisição para seus microsserviços</li>
+                            <li>Cada microsserviço deve fazer sua própria validação das <em>claims</em></li>
+                        </ul>
+                        <!-- @TODO gráfico -->
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Boas práticas</h1>
+                            <h2>Outras dicas</h2>
+                        </header>
+                        <ul>
+                            <li>Não coloque informações sensíveis em JWS</li>
+                            <li>Não coloque informações extremamente sensíveis em JWE</li>
                             <li>
-                                <a href="https://www.rfc-editor.org/rfc/rfc7165" target="_blank" rel="noopener">
-                                    RFC 7165: Use Cases and Requirements for JSON Object Signing and Encryption (JOSE)
-                                </a>
+                                Não coloque informações demais em JWT, pois além de poder gerar um erro <code>413 Entity
+                                Too Large</code> em alguns servidores, isso poderá consumir muita CPU e inclusive ser
+                                um vetor de ataques DoS
                             </li>
-                            <li>
-                                <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
-                                    RFC 7520: Examples of Protecting Content Using JSON Object Signing and Encryption
-                                    (JOSE)
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.rfc-editor.org/rfc/rfc7523" target="_blank" rel="noopener">
-                                    RFC 7523: JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and
-                                    Authorization Grants
-                                </a>
-                            </li>
+                            <li>Evite colocar dados sequenciais (como <code>id</code>)</li>
                         </ul>
                     </section>
                 </section> <!-- Boas práticas -->
@@ -545,13 +789,225 @@
                         <h1>Materiais</h1>
                     </section>
                     <section>
-                        <h1>Materiais</h1>
-                        <ul>
-                            <li><a href="https://jwt.io" target="_blank" rel="noopener">jwt.io</a></li>
-                            <li><a href="https://jwt.rocks" target="_blank" rel="noopener">jwt.rocks</a></li>
+                        <header>
+                            <h1>Materiais</h1>
+                            <h2>RFCs</h2>
+                        </header>
+                        <ul class="margin font-size-sm">
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7165" target="_blank" rel="noopener">
+                                    RFC 7165: Use Cases and Requirements for JOSE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7515" target="_blank" rel="noopener">
+                                    RFC 7515: JSON Web Signature (JWS)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener">
+                                    RFC 7516: JSON Web Encryption (JWE)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener">
+                                    RFC 7517: JSON Web Key (JWK)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener">
+                                    RFC 7518: JSON Web Algorithms (JWA)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener">
+                                    RFC 7519: JSON Web Token (JWT)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
+                                    RFC 7520: Examples of Protecting Content Using JOSE
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7523" target="_blank" rel="noopener">
+                                    RFC 7523: JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication and
+                                    Authorization Grants
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc8725" target="_blank" rel="noopener">
+                                    RFC 8725: JSON Web Token Best Current Practices
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Materiais</h1>
+                            <h2>Ferramentas</h2>
+                        </header>
+                        <ul class="margin font-size-sm">
+                            <li>
+                                <a href="https://jwt.io" target="_blank" rel="noopener">
+                                    jwt.io
+                                </a> para gerar/validar JWS
+                            </li>
+                            <li>
+                                <a href="https://jwt.rocks" target="_blank" rel="noopener">
+                                    jwt.rocks
+                                </a> para gerar/validar JWS e JWE
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Materiais</h1>
+                            <h2>Artigos</h2>
+                        </header>
+                        <ul class="margin font-size-sm">
+                            <li>
+                                <a href="https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html"
+                                   target="_blank" rel="noopener">OWASP: JSON Web Token Cheat Sheet for Java¶</a>
+                            </li>
+                            <li>
+                                <a href="https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf"
+                                   target="_blank" rel="noopener">OWASP: Attacking and Securing JWT</a>
+                            </li>
+                            <li>
+                                <a href="https://fusionauth.io/articles/tokens" target="_blank" rel="noopener">
+                                    FusionAuth: Token Articles
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://devops.com/how-to-revoke-json-web-tokens-jwts/" target="_blank"
+                                   rel="noopener">
+                                    DevOps.com: How to Revoke JSON Web Tokens (JWTs)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.brunobrito.net.br/jose-jwt-jws-jwe-jwa-jwk-jwks/" target="_blank"
+                                   rel="noopener">
+                                    Bruno Brito: Componentes do JWT (JWS, JWE, JWA, JWK, JWKS)
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://auth0.com/blog/a-look-at-the-latest-draft-for-jwt-bcp/" target="_blank"
+                                   rel="noopener">Auth0: A Look at The Draft for JWT Best Current Practices</a>
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <header>
+                            <h1>Materiais</h1>
+                            <h2>Bibliotecas</h2>
+                        </header>
+                        <ul class="margin font-size-sm">
+                            <li>
+                                Python:
+                                <a href="https://pypi.org/project/python-jose/" target="_blank" rel="noopener">
+                                    python-jose
+                                </a>
+                            </li>
+                            <li>
+                                Node:
+                                <a href="https://www.npmjs.com/package/jose" target="_blank" rel="noopener">
+                                    jose
+                                </a>
+                            </li>
+                            <li>
+                                PHP:
+                                <a href="https://lcobucci-jwt.readthedocs.io/" target="_blank" rel="noopener">
+                                    lcobucci/jwt
+                                </a> e
+                                <a href="https://web-token.spomky-labs.com/" target="_blank" rel="noopener">
+                                    web-token/jwt-core
+                                </a>
+                            </li>
+                            <li>
+                                Go:
+                                <a href="https://pkg.go.dev/gopkg.in/square/go-jose.v2" target="_blank" rel="noopener">
+                                    gopkg.in/square/go-jose.v2
+                                </a>
+                            </li>
+                            <li>
+                                Dart:
+                                <a href="https://pub.dev/packages/jose" target="_blank" rel="noopener">
+                                    jose
+                                </a>
+                            </li>
                         </ul>
                     </section>
                 </section> <!-- Materiais -->
+
+
+                <section> <!-- Obrigado -->
+                    <h2 class="text-center">Obrigado!</h2>
+                    <div class="about-me-links">
+                        <div>
+                            <svg role="img" width="64px" height="64px" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                                      class="fill"></path>
+                            </svg>
+                            <div>
+                                <p>Slides &amp; GitHub</p>
+                                <a href="https://github.com/vcampitelli" target="_blank" rel="noopener">
+                                    vcampitelli
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <svg role="img" width="64px" height="64px" viewBox="0 0 24 24"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"
+                                      class="fill"></path>
+                            </svg>
+                            <div>
+                                <p>Twitter</p>
+                                <a href="https://twitter.com/vcampitelli" target="_blank" rel="noopener">
+                                    vcampitelli
+                                </a>
+                            </div>
+                        </div>
+                        <div>
+                            <svg role="img" height="64" viewBox="0 0 74 74" width="64"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                <g fill="none" fill-rule="evenodd">
+                                    <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z"
+                                          class="fill"/>
+                                    <path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z"
+                                          class="fill-bg"/>
+                                </g>
+                            </svg>
+                            <div>
+                                <p>LinkedIn</p>
+                                <a href="https://linkedin.com/in/viniciuscampitelli" target="_blank" rel="noopener">
+                                    Vinícius Campitelli
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section> <!-- Obrigado -->
+
+                <section>
+                    <h2>Treinamentos in company</h2>
+                    <div class="d-flex half-columns">
+                        <div style="line-height: 1.5">
+                            Gostou? Então conheça meus treinamentos corporativos e sob demanda sobre Desenvolvimento,
+                            Segurança da Informação, DevOps, Arquitetura de Sistemas e diversos outros assuntos
+                        </div>
+                        <div class="text-center">
+                            <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener"
+                               class="d-block">
+                                <img src="img/qrcode-workshops.png" alt="Workshops" style="height: 300px">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener">
+                        bit.ly/vcampitelli-workshops
+                    </a>
+                </section>
             </div>
         </div>
 
