@@ -18,7 +18,8 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&Fira+Code:wght@300&display=swap"
+              rel="stylesheet">
 
         <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="256x256" href="/img/favicon.png">
@@ -105,32 +106,32 @@
                         <h1>Framework JOSE</h1>
                         <p>
                             <span class="fs-italic"><b>J</b>SON <b>O</b>bject <b>S</b>igning and <b>E</b>ncryption</span>
-                            é um conjunto para padronizar algumas representações utilizando o formato JSON:
+                            é um conjunto de regras para padronizar algumas representações utilizando o formato JSON:
                         </p>
                         <ul class="margin-sm font-size-sm">
-                            <li>
+                            <li class="fragment">
                                 <a href="https://www.rfc-editor.org/rfc/rfc7515" target="_blank" rel="noopener">
                                     RFC 7515</a>: Objetos Protegidos com Integridade <em>(JSON Web Signatures - JWS)</em>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener">
                                     RFC 7516</a>: Objetos Criptografados <em>(JSON Web Encryption - JWE)</em>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener">
                                     RFC 7517</a>: Representações de Chaves <em>(JSON Web Key - JWK)</em>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener">
                                     RFC 7518</a>: Definições de Algoritmos <em>(JSON Web Algorithms - JWA)</em>
                             </li>
-                            <li>
-                                <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
-                                    RFC 7520</a>: Vetores de Teste dos Padrões acima
-                            </li>
-                            <li>
+                            <li class="fragment">
                                 <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener">
                                     RFC 7519</a>: JSON Web Token <em>(JWT)</em>
+                            </li>
+                            <li class="fragment">
+                                <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
+                                    RFC 7520</a>: Vetores de Teste dos Padrões acima
                             </li>
                         </ul>
                         <a href="https://datatracker.ietf.org/wg/jose/charter/" target="_blank" rel="noopener"
@@ -196,7 +197,7 @@
                             <h2>JWT</h2>
                         </header>
                         <p>Exemplo de um JWT:</p>
-                        <div class="word-break line-height-sm mb-4">
+                        <div class="word-break line-height-sm mb-3">
                             <code class="color-link font-size-sm">
                                 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
                             </code>
@@ -215,15 +216,14 @@
                             <h2>JWT: Prós</h2>
                         </header>
                         <ul class="margin">
-                            <li>
+                            <li class="fragment">
                                 Maneira <em>(relativamente)</em> segura para trocar informações de
                                 autenticação e autorização
                             </li>
-                            <li>
-                                Gerenciamento de sessão <em>stateless</em>, já que o
-                                <em>token</em> é auto-contido
+                            <li class="fragment">
+                                Gerenciamento de sessão <em>stateless</em>, pois o <em>token</em> é auto-contido
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Diminui gargalo no <kbd>Serviço de Autenticação</kbd>, já que os outros serviços são
                                 capazes de validar o <em>token</em> sem acessá-lo
                             </li>
@@ -235,23 +235,22 @@
                             <h2>JWT: Contras</h2>
                         </header>
                         <ul class="margin">
-                            <li>
+                            <li class="fragment">
+                                Se a aplicação é um monolito
+                            </li>
+                            <li class="fragment">
                                 Maior complexidade para lidar com revogação de <em>tokens</em>
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições ou
                                 até utilizando todo o espaço do <em>cookie</em> ou dos cabeçalhos HTTP
                             </li>
-                            <li>
-                                Necessita de mais cuidados de segurança tanto do <kbd>Serviço de Autenticação</kbd>
-                                quanto dos <kbd>Serviços de Negócio</kbd>
-                            </li>
-                            <li>
+                            <li class="fragment">
                                 Dificuldade em identificar usuários atualmente logados no sistema
                             </li>
-                            <li>
-                                Em alguns casos, é mais recomendável usar <em>tokens</em> opacos e/ou a própria
-                                funcionalidade de sessões do <em>back-end</em>
+                            <li class="fragment">
+                                Por tudo isso, em alguns casos é mais recomendável usar <em>tokens</em> opacos e/ou a
+                                própria funcionalidade de sessões do <em>back-end</em>
                             </li>
                         </ul>
                     </section>
@@ -282,7 +281,7 @@
                             <h2>JWS</h2>
                         </header>
                         <p>Estrutura de um JWT utilizando JWS:</p>
-                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break" data-trim
+                        <pre class="mb-3"><code class="hljs color-default no-highlight word-break" data-trim
                                                 data-noescape>
                             <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
                                 class="fragment highlight-green" data-fragment-index="1">eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0</span>.<span
@@ -305,7 +304,7 @@
                                  data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
                         </div>
                     </section>
-                    <section data-auto-animate>
+                    <section data-auto-animate data-auto-animate-restart>
                         <header>
                             <h1>Framework JOSE</h1>
                             <h2>JWE</h2>
@@ -321,46 +320,35 @@
                             <h1>Framework JOSE</h1>
                             <h2>JWE</h2>
                         </header>
-                        <p>
-                            Em alguns casos, utiliza-se uma abordagem híbrida de criptografia: <b>Criptografia
-                            simétrica</b> para criptografar o <em>payload</em> e <b>Criptografia assimétrica</b> para
-                            cripotgrafar a <kbd>Chave simétrica</kbd>
-                        </p>
-                        <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener"
-                           class="reference">RFC 7516</a>
-                    </section>
-                    <section data-auto-animate>
-                        <header>
-                            <h1>Framework JOSE</h1>
-                            <h2>JWE</h2>
-                        </header>
                         <p>Estrutura de um JWT utilizando JWE:</p>
-                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break" data-trim
-                                                data-noescape>
-                            <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
-                                class="fragment highlight-green" data-fragment-index="1">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
-                                class="fragment highlight-red" data-fragment-index="2">W8n4sxRmfroCN65Z</span>.<span
-                                class="fragment highlight-cyan custom" data-fragment-index="3">Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA</span>.<span
+                        <pre class="mb-3 custom fragment font-size-shrink" data-fragment-index="0"><code class="hljs color-default no-highlight word-break"
+                                                data-trim data-noescape>
+                            <span class="fragment highlight-blue" data-fragment-index="1">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
+                                class="fragment highlight-green" data-fragment-index="2">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
+                                class="fragment highlight-red" data-fragment-index="3">W8n4sxRmfroCN65Z</span>.<span
+                                class="fragment highlight-cyan custom" data-fragment-index="4">Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA</span>.<span
                                 class="fragment highlight-violet custom"
-                                data-fragment-index="4">P6rEnI71xYgqhdxDDuj8jA</span>
+                                data-fragment-index="5">P6rEnI71xYgqhdxDDuj8jA</span>
                         </code></pre>
                         <div class="d-grid half-columns">
-                            <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="0"><code
-                                    class="javascript font-size-xs line-height-normal word-break" data-trim>
+                            <span class="font-size-sm fragment color-blue" data-fragment-index="1">Cabeçalho</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="1"><code
+                                    class="javascript font-size-sm line-height-normal word-break" data-trim>
                                 base64url({"alg": "ECDH-ES+A256KW", "enc": "A256GCM", "epk": {"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
                             </code></pre>
-                            <span class="font-size-sm fragment color-green" data-fragment-index="1">Chave</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="1">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(key)</code>
-                            </pre>
-                            <span class="font-size-sm fragment color-red" data-fragment-index="2">IV</span>
+                            <span class="font-size-sm fragment color-green" data-fragment-index="2">Chave</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="2">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(iv)</code>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>
+                                    base64url(encrypt(ephemeralKey, privateKey))
+                                </code>
                             </pre>
-                            <span class="font-size-sm fragment color-cyan" data-fragment-index="3">Corpo</span>
+                            <span class="font-size-sm fragment color-red" data-fragment-index="3">IV</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="3">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(iv)</code>
+                            </pre>
+                            <span class="font-size-sm fragment color-cyan" data-fragment-index="4">Corpo</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="4">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>
                                     base64url(encrypt({
                                       "iat": 1687136586,
                                       "sub": "autenticacao-jwt",
@@ -369,9 +357,9 @@
                                       "exp": 1687140186
                                     }, key))
                             </code></pre>
-                            <span class="font-size-sm fragment color-violet" data-fragment-index="4">Tag</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="4">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(tag)</code>
+                            <span class="font-size-sm fragment color-violet" data-fragment-index="5">Tag</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="5">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(tag)</code>
                             </pre>
                         </div>
                     </section>
@@ -468,9 +456,7 @@
                                     <td class="nowrap">
                                         <code class="fragment custom underline" data-fragment-index="0">ECDH-ES</code>
                                     </td>
-                                    <td>Curvas Elíptica de Diffie-Hellman Ephemeral Static key agreement using Concat
-                                        KDF
-                                    </td>
+                                    <td>Curvas Elípticas com Troca de Chaves de Diffie-Hellman usando Concat KDF</td>
                                 </tr>
                                 <tr>
                                     <td class="nowrap">
@@ -508,7 +494,7 @@
                             <h2>JWK e JWKS</h2>
                         </header>
                         <p>
-                            Hospede-o em um endereço público para que os <kbd>Serviços de negócio</kbd> o consultem,
+                            Hospede-o em um endereço público para que os <kbd>Serviços de Negócio</kbd> o consultem,
                             como em <a href="https://www.facebook.com/.well-known/oauth/openid/jwks/" target="_blank"
                                rel="noopener">facebook.com/.well-known/oauth/openid/jwks</a>:
                         </p>
@@ -613,56 +599,61 @@
                     </section>
                 </section> <!-- Claims -->
 
-                <section> <!-- Boas práticas -->
+                <section> <!-- Recomendações -->
                     <section>
-                        <h1>Boas práticas</h1>
+                        <h1>Recomendações</h1>
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Algoritmos</h2>
                         </header>
-                        <p class="fw-bold">Para JWS:</p>
+                        <p class="fw-bold fragment">Para JWS:</p>
                         <ul>
-                            <li>
+                            <li class="fragment">
                                 Se você possuir apenas <b>um</b> <kbd>Serviço de Negócio</kbd>, pode usar
                                 <code>HS256</code>
                                 <ul>
-                                    <li>
+                                    <li class="fragment">
                                         Senão, use <code>ES256</code> se disponível ou finalmente opte por
                                         <code>RS256</code>
                                     </li>
-                                    <li>
-                                        Utilize <a href="#jwks">JWKS</a> para expôr as chaves públicas
-                                    </li>
                                 </ul>
                             </li>
+                            <li class="fragment">
+                                Utilize <a href="#jwks">JWKS</a> para expôr suas chaves públicas
+                            </li>
+                            <li class="fragment"><span class="fragment custom font-size-grow">
+                                Garanta que não está aceitando <code>none</code>
+                            </span></li>
                         </ul>
-                        <p class="fw-bold">Para JWE:</p>
-                        <ul>
-                            <li>Se disponível, <code>ECDH-ES</code></li>
-                            <li>Senão, <code>RSAES-OAEP</code></li>
-                        </ul>
+                        <div class="fragment mt-3">
+                            <p class="fw-bold">Para JWE:</p>
+                            <ul>
+                                <li>Se disponível, <code>ECDH-ES</code></li>
+                                <li>Senão, <code>RSAES-OAEP</code></li>
+                            </ul>
+                        </div>
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Chaves</h2>
                         </header>
                         <p>Recomendações mínimas para cada algoritmo:</p>
                         <ul class="margin-sm font-size-sm">
-                            <li>
+                            <li class="fragment">
                                 Funções de <em>hashing</em> <span class="font-size-sm">(HS256, HS384 ou HS512)</span>:
                                 respeite o pedido do algoritmo (256, 384 ou 512 bits) e utilize boa entropia
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Chaves RSA: o mínimo recomendável é de 2048 bits
                             </li>
-                            <li>
+                            <li class="fragment">
                                 Chaves de Curva Elíptica (EC): utilize o algoritmo <em>prime256v1</em>
                             </li>
                         </ul>
-                        <p>
+                        <p class="fragment">
                             Em todos os casos, crie uma política de <b>Rotação de chaves</b>!
                         </p>
                         <a href="https://programmerall.com/article/4483729988/" target="_blank" rel="noopener"
@@ -670,25 +661,30 @@
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Refresh tokens</h2>
                         </header>
                         <p>
                             Outro tipo de <em>token</em> enviado junto com o <kbd>access token</kbd> que possui a
                             principal funcionalidade de <b>diminuir a superfície de ataque</b>
                         </p>
-                        <p>Deve ser utilizado para receber um novo <kbd>access token</kbd> após sua expiração</p>
-                        <p>Com isso, é possível ter JWTs com um tempo de expiração curto para aumentar a segurança</p>
+                        <p class="fragment">
+                            Deve ser utilizado para receber um novo <kbd>access token</kbd> após sua expiração e ser
+                            usado somente uma única vez
+                        </p>
+                        <p class="fragment">
+                            Com isso, é possível ter JWTs com um tempo de expiração curto para aumentar a segurança
+                        </p>
                         <a href="https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/"
                            target="_blank" rel="noopener" class="reference">Auth0: What Are Refresh Tokens and How to
                             Use Them Securely</a>
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Dicas para Expiração</h2>
+                            <h1>Recomendações</h1>
+                            <h2>Expiração / Revogação</h2>
                         </header>
-                        <p class="fw-bold">Para Comunicação entre Serviços:</p>
+                        <p class="fw-bold">Para Comunicação Entre Serviços:</p>
                         <p>
                             Utilize um tempo de expiração bastante curto (por exemplo, 15 minutos), fazendo com que o
                             serviço cliente deva frequentemente reautenticar-se
@@ -696,33 +692,34 @@
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Dicas para Expiração</h2>
+                            <h1>Recomendações</h1>
+                            <h2>Expiração / Revogação</h2>
                         </header>
-                        <p class="fw-bold">Para Usuários de Aplicações Web:</p>
+                        <p class="fw-bold">Para Usuários:</p>
                         <p>
-                            Crie um JWT com expiração de <em>uma semana*</em> e envie um <em>refresh token</em> com
-                            expiração um pouco maior
+                            Crie um JWT com expiração de <em>uma semana*</em> e envie um <kbd>refresh token</kbd> com
+                            expiração maior (<em>um mês*</em>)
                         </p>
-                        <p>
-                            A cada acesso do usuário à aplicação ou a cada intervalo de tempo (<em>1 hora*</em>),
-                            utilize o <em>refresh token</em> para conseguir um novo <em>access token</em>
+                        <p class="fragment">
+                            A cada acesso do usuário à aplicação ou a cada intervalo de tempo (<em>uma hora*</em>),
+                            utilize o <kbd>refresh token</kbd> para conseguir outros novos <kbd>access token</kbd> e
+                            <kbd>refresh token</kbd>
                         </p>
-                        <p>
+                        <p class="fragment">
                             Se o usuário não acessar a aplicação nesse tempo, faça-o logar novamente
                         </p>
-                        <p class="font-size-sm"><em>* Defina esses tempos com sua equipe de Produto/UX</em></p>
+                        <p class="fragment font-size-sm"><em>* Defina esses tempos com sua equipe de Produto/UX</em></p>
                     </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em aplicações Web:</p>
+                        <p class="fw-bold">Em Aplicações Web:</p>
                         <p>
-                            Estratégia 1: guardar o <em>token</em> somente em memória em seu
-                            código JavaScript, podendo também utilizar <a
+                            <span class="fw-bold">Estratégia 1:</span> guardar o <em>token</em> somente em memória em
+                            seu código JavaScript, podendo também utilizar <a
                                 href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API" target="_blank"
                                 rel="noopener">Web Workers</a> para salvá-lo
                         </p>
@@ -733,14 +730,14 @@
                     </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em aplicações Web:</p>
+                        <p class="fw-bold">Em Aplicações Web:</p>
                         <p>
-                            Estratégia 2: utilizar <code>Cookie</code> (e não <code>LocalStorage</code>) com as
-                            <span class="fs-italic">flags</span>:
+                            <span class="fw-bold">Estratégia 2:</span> utilizar <code>Cookie</code> (e não <code>LocalStorage</code>)
+                            com as <span class="fs-italic">flags</span>:
                         </p>
                         <ul>
                             <li><code>Secure</code> para apenas trafegar em HTTPS</li>
@@ -756,58 +753,57 @@
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em aplicações Mobile:</p>
+                        <p class="fw-bold">Em Aplicações Mobile:</p>
                         <p>
-                            Guarde o <em>token</em> no armazenamento seguro da plataforma, como o
-                            <a href="https://developer.android.com/reference/android/content/SharedPreferences"
-                               target="_blank" rel="noopener"><code>SharedPreferences</code></a> no Android ou
-                            <a href="https://developer.apple.com/documentation/security/keychain_services"
-                               target="_blank" rel="noopener"><code>Keychain</code></a> no iOS
+                            Guarde o <em>token</em> no armazenamento seguro específico da plataforma ou biblioteca, por
+                            exemplo:
                         </p>
-                    </section>
-                    <section data-auto-animate>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Validação</h2>
-                        </header>
-                        <p>Ao receber um <em>token</em>, certifique-se de validar...</p>
                         <ul>
-                            <li class="fragment">
-                                O algoritmo (e que não está permitindo <code>none</code>)
+                            <li>
+                                Android: <a
+                                    href="https://developer.android.com/reference/android/content/SharedPreferences"
+                                    target="_blank" rel="noopener"><code>SharedPreferences</code></a>
                             </li>
-                            <li class="fragment">
-                                As <em>claims</em> esperadas (<code>iss</code>, <code>aud</code>,
-                                <code>sub</code> e outros campos)
+                            <li>
+                                iOS: <a href="https://developer.apple.com/documentation/security/keychain_services"
+                                        target="_blank" rel="noopener"><code>Keychain</code></a>
                             </li>
-                            <li class="fragment">
-                                Se o <em>token</em> é válido (<code>nbf</code> e <code>exp</code>)
+                            <li>
+                                React Native (Expo): <a href="https://docs.expo.dev/versions/latest/sdk/securestore/"
+                                        target="_blank" rel="noopener"><code>SecureStore</code></a>
                             </li>
-                            <li class="fragment">Se o <em>token</em> não está revogado (consultar <em>blacklist</em>)</li>
+                            <li>
+                                Flutter: <a href="https://pub.dev/packages/flutter_secure_storage"
+                                        target="_blank" rel="noopener"><code>flutter_secure_storage</code></a>
+                            </li>
                         </ul>
                     </section>
                     <section data-auto-animate data-auto-animate-restart>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Revogação</h2>
                         </header>
                         <p>
-                            Um dos maiores contras de se utilizar JWT, pois geralmente é bastante custoso
+                            Um dos maiores desafios ao se utilizar JWT, pois geralmente é bastante custoso
+                            computacionalmente, inclusive sendo um ponto decisivo se você deve usar JWTs ou não
                         </p>
                     </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Revogação</h2>
                         </header>
                         <p class="fw-bold">Estratégia 1:</p>
                         <p data-id="desc">
-                            Guarde o <code>jti</code> do <em>token</em> em algum armazenamento e garanta que os
-                            <kbd>Serviços de Negócio</kbd> o consultem. Para revogar todos os <em>tokens</em> de um
-                            usuário, faça o mesmo para o <code>sub</code>.
+                            Guarde o <code>jti</code> do <em>token</em> em algum armazenamento como <em>denylist</em> e
+                            garanta que os <kbd>Serviços de Negócio</kbd> o consultem ao validar o JWT
+                        </p>
+                        <p>
+                            Para revogar todos os <em>tokens</em> de um usuário, faça o mesmo para o <code>sub</code>
                         </p>
                         <div class="fragment alert" data-id="nota">
                             Nota: você só precisa guardar aquela informação até a data de expiração do <em>token</em>,
@@ -817,33 +813,20 @@
                     </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Revogação</h2>
                         </header>
                         <p class="fw-bold">Estratégia 1:</p>
-                        <p data-id="pros">
-                            <span class="fw-bold">Prós:</span> menor complexidade arquitetural
-                        </p>
-                        <p data-id="contras" class="fw-bold">Contras:</p>
-                        <ul>
-                            <li>
-                                Inviável se houver muitos <kbd>Serviços de Negócio</kbd> (ou se são clientes)
-                            </li>
-                            <li>Pode criar gargalos no armazenamento</li>
-                        </ul>
+                        <img src="img/revogacao-denylist.svg" alt="Denylist para revogação">
                     </section>
-                    <section>
+                    <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Revogação</h2>
                         </header>
-                        <p class="fw-bold">Estratégia 2:</p>
+                        <p class="fw-bold">Estratégia 1:</p>
                         <p>
-                            Usar uma arquitetura orientada a eventos para informar seus serviços que o <em>token</em>
-                            com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
-                        </p>
-                        <p>
-                            <span class="fw-bold">Prós:</span> mantém o JWT totalmente <em>stateless</em>
+                            <span class="fw-bold">Prós:</span> expiração quase instantânea
                         </p>
                         <p class="fw-bold">Contras:</p>
                         <ul>
@@ -853,9 +836,45 @@
                             <li>Pode criar gargalos no armazenamento</li>
                         </ul>
                     </section>
+                    <section data-auto-animate data-auto-animate-restart>
+                        <header>
+                            <h1>Recomendações</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 2:</p>
+                        <p>
+                            Usar Eventos ou Webhooks para informar os <kbd>Serviços de Negócio</kbd> que o
+                            <em>token</em> com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
+                        </p>
+                    </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 2:</p>
+                        <img src="img/revogacao-eventos.svg" alt="Eventos para revogação">
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Recomendações</h1>
+                            <h2>Revogação</h2>
+                        </header>
+                        <p class="fw-bold">Estratégia 2:</p>
+                        <p>
+                            <span class="fw-bold">Prós:</span> mantém o JWT totalmente <em>stateless</em>
+                        </p>
+                        <p><span class="fw-bold">Contras:</span></p>
+                        <ul>
+                            <li>
+                                Inviável se houver muitos <kbd>Serviços de Negócio</kbd> (ou se são clientes)
+                            </li>
+                            <li>Pode criar gargalos no armazenamento</li>
+                        </ul>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Recomendações</h1>
                             <h2>Revogação</h2>
                         </header>
                         <p class="fw-bold">Estratégia 3:</p>
@@ -863,19 +882,21 @@
                             Criar o JWT com um tempo de expiração muito curto (alguns minutos, por exemplo) e o
                             <em>refresh token</em> com um tempo maior (uma semana ou mais)
                         </p>
-                        <p>
-                            <span class="fw-bold">Prós:</span> toda a estratégia fica centralizada no <kbd>Servidor de
-                            autenticação</kbd>
-                        </p>
-                        <p>
-                            <span class="fw-bold">Contras:</span> o usuário poderá acessar recursos até o tempo de
-                            expiração do <em>token</em>
-                        </p>
+                        <div class="fragment mt-3">
+                            <p>
+                                <span class="fw-bold">Prós:</span> toda a estratégia fica centralizada no <kbd>Serviço
+                                de autenticação</kbd>
+                            </p>
+                            <p>
+                                <span class="fw-bold">Contras:</span> o usuário poderá acessar recursos até a expiração
+                                do <em>token</em>
+                            </p>
+                        </div>
                     </section>
                     <section>
                         <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Em microsserviços</h2>
+                            <h1>Recomendações</h1>
+                            <h2>Em Microsserviços</h2>
                         </header>
                         <ul>
                             <li>
@@ -890,9 +911,31 @@
                             <li>Cada microsserviço deve fazer sua própria validação das <em>claims</em></li>
                         </ul>
                     </section>
+                    <section>
+                        <header>
+                            <h1>Recomendações</h1>
+                            <h2>Validação</h2>
+                        </header>
+                        <p>Ao receber um <em>token</em>, certifique-se de validar...</p>
+                        <ul>
+                            <li class="fragment">
+                                O algoritmo (e que não está permitindo <code>none</code>)
+                            </li>
+                            <li class="fragment">
+                                As <em>claims</em> esperadas (<code>iss</code>, <code>aud</code>,
+                                <code>sub</code> e outros campos)
+                            </li>
+                            <li class="fragment">
+                                Se o <em>token</em> é válido (<code>nbf</code> e <code>exp</code>)
+                            </li>
+                            <li class="fragment">
+                                Se o <em>token</em> não está revogado (consultar <em>denylist</em>)
+                            </li>
+                        </ul>
+                    </section>
                     <section data-auto-animate>
                         <header>
-                            <h1>Boas práticas</h1>
+                            <h1>Recomendações</h1>
                             <h2>Outras dicas</h2>
                         </header>
                         <ul class="margin-sm">
@@ -903,10 +946,10 @@
                                 Large</code> em alguns servidores, isso poderá consumir muita CPU e inclusive ser um
                                 vetor de ataques DoS
                             </li>
-                            <li>Evite colocar dados sequenciais (como <code>id</code>)</li>
+                            <li>Evite colocar dados sequenciais (como <code>id</code>) em JWS</li>
                         </ul>
                     </section>
-                </section> <!-- Boas práticas -->
+                </section> <!-- Recomendações -->
 
                 <section> <!-- Materiais -->
                     <section>
@@ -992,7 +1035,7 @@
                         <ul class="margin font-size-sm">
                             <li>
                                 <a href="https://cheatsheetseries.owasp.org/cheatsheets/JSON_Web_Token_for_Java_Cheat_Sheet.html"
-                                   target="_blank" rel="noopener">OWASP: JSON Web Token Cheat Sheet for Java¶</a>
+                                   target="_blank" rel="noopener">OWASP: JSON Web Token Cheat Sheet for Java</a>
                             </li>
                             <li>
                                 <a href="https://owasp.org/www-chapter-vancouver/assets/presentations/2020-01_Attacking_and_Securing_JWT.pdf"
@@ -1153,13 +1196,16 @@
         <script src="reveal.js/plugin/notes/notes.js"></script>
         <script>
             document.querySelectorAll('img.insert-svg').forEach(($img) => {
-                fetch($img.src)
-                    .then(response => response.text())
-                    .then(contents => {
+                fetch($img.src).then(response => {
+                    if (!response.ok) {
+                        return;
+                    }
+                    response.text().then(contents => {
                         const $wrapper = document.createElement('div');
-                        $wrapper.innerHTML = contents;
+                        $wrapper.innerHTML = contents.replace('<?xml version="1.0" encoding="UTF-8"?>', '');
                         $img.parentNode.replaceChild($wrapper, $img);
                     });
+                });
             });
             Reveal.initialize({
                 hash: true,

@@ -1,5 +1,5 @@
 :root {
-  --r-heading-font: Lato, serif;
+  --r-heading-font: Lato, sans-serif;
   --r-heading-font-weight: 700;
   --r-heading-letter-spacing: -3px;
   --r-heading1-size: 2.11em;
@@ -7,7 +7,7 @@
   --r-heading3-size: 1.275em;
   --r-heading4-size: 1em;
   --r-heading-margin: 0 0 40px 0;
-  --r-main-font: Lato, serif;
+  --r-main-font: Lato, sans-serif;
   --r-main-font-size: 30px;
   --color-cyan: #1bffff;
   --color-violet: #ee82ee;
@@ -62,8 +62,8 @@ header > h2 {
 /* Sobre mim */
 #about-me {
   display: grid;
-  row-gap: 1rem;
-  grid-template-columns: auto auto;
+  gap: 1rem 3rem;
+  grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: space-between;
 }
@@ -138,7 +138,7 @@ header > h2 {
   flex: 1 0 50%;
 }
 .d-grid.half-columns {
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
 }
 
 /* Tipografia */
@@ -149,7 +149,10 @@ header > h2 {
   font-size: 0.6em;
 }
 .fw-bold {
-  font-weight: bold;
+  font-weight: 600;
+}
+p.fw-bold {
+  font-weight: 900;
 }
 .fs-italic {
   font-style: italic;
@@ -211,6 +214,12 @@ kbd {
 .color-link {
   color: var(--r-link-color);
 }
+.reveal a > code {
+  color: var(--r-link-color);
+}
+.reveal a > code:is(:hover, :active) {
+  color: var(--r-link-color-hover);
+}
 
 /* Margens */
 table,
@@ -218,12 +227,15 @@ table,
   margin-left: 0 !important;
   margin-right: 0 !important;
 }
-.mb-4 {
+.mb-3 {
   margin-bottom: 2rem;
 }
+.mt-3 {
+  margin-top: 2rem !important;
+}
 .my-1 {
-  margin-top: 0.25rem !important;
-  margin-bottom: 0.25rem !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
 }
 section > p:last-child {
   margin-bottom: 0;
@@ -235,10 +247,6 @@ code {
 }
 code.font-size-sm {
   font-size: 0.75em;
-}
-code.font-size-xs {
-  font-size: 0.45em;
-  line-height: 0.1;
 }
 code.word-break {
   white-space: break-spaces !important;
@@ -266,6 +274,17 @@ svg {
 .fragment.highlight-violet.visible {
   color: var(--color-violet);
 }
+.fragment.font-size-grow.visible {
+  font-size: 1.1em;
+  font-weight: 600;
+  line-height: 0.8;
+}
+pre.fragment.font-size-shrink:not(.visible) {
+  font-size: 0.75em;
+}
+pre.fragment.font-size-shrink.visible {
+  font-size: 0.45em;
+}
 .fill {
   fill: var(--r-heading-color);
 }
@@ -276,7 +295,7 @@ svg {
   background: rgba(0, 0, 0, 0.5);
 }
 .alert {
-  font-size: 0.9em;
+  font-size: 0.85em;
   font-style: italic;
   background: #1e2029;
   padding: 0.75em 0.8em;
@@ -292,8 +311,8 @@ ul.margin > li {
   margin-bottom: 0.75em;
 }
 li > ul {
-  margin-top: 0.5em !important;
-  margin-bottom: 0.5em !important;
+  margin-top: 0.25em !important;
+  margin-bottom: 0.25em !important;
 }
 ul.margin-sm > li {
   margin-bottom: 0.5em;
