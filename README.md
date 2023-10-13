@@ -1,5 +1,7 @@
 # O que você precisa saber sobre autenticação com JWT
 
+> Essa é uma versão de 20 minutos da palestra. Para checar a versão completa, acesse a branch [`main`](https://github.com/vcampitelli/slides-autenticacao-jwt/).
+
 Para clonar o repositório:
 
 ```shell

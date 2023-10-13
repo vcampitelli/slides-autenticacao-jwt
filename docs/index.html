@@ -30,10 +30,10 @@
 
                 <section> <!-- Sobre mim -->
                     <section data-auto-animate>
-                        <h2>Sobre mim</h2>
+                        <h1>Sobre mim</h1>
                     </section>
                     <section data-auto-animate>
-                        <h2>Sobre mim</h2>
+                        <h1>Sobre mim</h1>
                         <div id="about-me">
                             <div class="text-center">
                                 <img src="img/profile.jpg" alt="Vinícius Campitelli" id="profile-pic">
@@ -275,7 +275,6 @@
                             <h1>Framework JOSE</h1>
                             <h2>JWS</h2>
                         </header>
-                        <p>Estrutura de um JWT utilizando JWS:</p>
                         <pre class="mb-4"><code class="hljs color-default no-highlight word-break" data-trim
                                                 data-noescape>
                             <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
@@ -299,7 +298,7 @@
                                  data-fragment-index="2"><code>base64url(hmac(header . payload))</code></pre>
                         </div>
                     </section>
-                    <section data-auto-animate>
+                    <section data-auto-animate data-auto-animate-restart>
                         <header>
                             <h1>Framework JOSE</h1>
                             <h2>JWE</h2>
@@ -328,8 +327,7 @@
                             <h1>Framework JOSE</h1>
                             <h2>JWE</h2>
                         </header>
-                        <p>Estrutura de um JWT utilizando JWE:</p>
-                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break" data-trim
+                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break font-size-sm" data-trim
                                                 data-noescape>
                             <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
                                 class="fragment highlight-green" data-fragment-index="1">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
@@ -341,20 +339,20 @@
                         <div class="d-grid half-columns">
                             <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="0"><code
-                                    class="javascript font-size-xs line-height-normal word-break" data-trim>
+                                    class="javascript font-size-sm line-height-normal word-break" data-trim>
                                 base64url({"alg": "ECDH-ES+A256KW", "enc": "A256GCM", "epk": {"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
                             </code></pre>
                             <span class="font-size-sm fragment color-green" data-fragment-index="1">Chave</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="1">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(key)</code>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(key)</code>
                             </pre>
                             <span class="font-size-sm fragment color-red" data-fragment-index="2">IV</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="2">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(iv)</code>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(iv)</code>
                             </pre>
                             <span class="font-size-sm fragment color-cyan" data-fragment-index="3">Corpo</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="3">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>
                                     base64url(encrypt({
                                       "iat": 1687136586,
                                       "sub": "autenticacao-jwt",
@@ -365,7 +363,7 @@
                             </code></pre>
                             <span class="font-size-sm fragment color-violet" data-fragment-index="4">Tag</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="4">
-                                <code class="javascript font-size-xs line-height-normal" data-trim>base64url(tag)</code>
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(tag)</code>
                             </pre>
                         </div>
                     </section>
@@ -677,36 +675,6 @@
                            target="_blank" rel="noopener" class="reference">Auth0: What Are Refresh Tokens and How to
                             Use Them Securely</a>
                     </section>
-                    <section>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Dicas para Expiração</h2>
-                        </header>
-                        <p class="fw-bold">Para Comunicação entre Serviços:</p>
-                        <p>
-                            Utilize um tempo de expiração bastante curto (por exemplo, 15 minutos), fazendo com que o
-                            serviço cliente deva frequentemente reautenticar-se
-                        </p>
-                    </section>
-                    <section>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Dicas para Expiração</h2>
-                        </header>
-                        <p class="fw-bold">Para Usuários de Aplicações Web:</p>
-                        <p>
-                            Crie um JWT com expiração de <em>uma semana*</em> e envie um <em>refresh token</em> com
-                            expiração um pouco maior
-                        </p>
-                        <p>
-                            A cada acesso do usuário à aplicação ou a cada intervalo de tempo (<em>1 hora*</em>),
-                            utilize o <em>refresh token</em> para conseguir um novo <em>access token</em>
-                        </p>
-                        <p>
-                            Se o usuário não acessar a aplicação nesse tempo, faça-o logar novamente
-                        </p>
-                        <p class="font-size-sm"><em>* Defina esses tempos com sua equipe de Produto/UX</em></p>
-                    </section>
                     <section data-auto-animate>
                         <header>
                             <h1>Boas práticas</h1>
@@ -783,108 +751,7 @@
                             <li class="fragment">Se o <em>token</em> não está revogado (consultar <em>blacklist</em>)</li>
                         </ul>
                     </section>
-                    <section data-auto-animate data-auto-animate-restart>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Revogação</h2>
-                        </header>
-                        <p>
-                            Um dos maiores contras de se utilizar JWT, pois geralmente é bastante custoso
-                        </p>
-                    </section>
-                    <section data-auto-animate>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Revogação</h2>
-                        </header>
-                        <p class="fw-bold">Estratégia 1:</p>
-                        <p data-id="desc">
-                            Guarde o <code>jti</code> do <em>token</em> em algum armazenamento e garanta que os
-                            <kbd>Serviços de Negócio</kbd> o consultem. Para revogar todos os <em>tokens</em> de um
-                            usuário, faça o mesmo para o <code>sub</code>.
-                        </p>
-                        <div class="fragment alert" data-id="nota">
-                            Nota: você só precisa guardar aquela informação até a data de expiração do <em>token</em>,
-                            então se usar algo em memória (como Redis ou memcached), você pode utilizar a própria
-                            funcionalidade de <em>time-to-live</em> do serviço
-                        </div>
-                    </section>
-                    <section data-auto-animate>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Revogação</h2>
-                        </header>
-                        <p class="fw-bold">Estratégia 1:</p>
-                        <p data-id="pros">
-                            <span class="fw-bold">Prós:</span> menor complexidade arquitetural
-                        </p>
-                        <p data-id="contras" class="fw-bold">Contras:</p>
-                        <ul>
-                            <li>
-                                Inviável se houver muitos <kbd>Serviços de Negócio</kbd> (ou se são clientes)
-                            </li>
-                            <li>Pode criar gargalos no armazenamento</li>
-                        </ul>
-                    </section>
                     <section>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Revogação</h2>
-                        </header>
-                        <p class="fw-bold">Estratégia 2:</p>
-                        <p>
-                            Usar uma arquitetura orientada a eventos para informar seus serviços que o <em>token</em>
-                            com aquele <code>jti</code> ou <code>sub</code> não pode mais ser aceito
-                        </p>
-                        <p>
-                            <span class="fw-bold">Prós:</span> mantém o JWT totalmente <em>stateless</em>
-                        </p>
-                        <p class="fw-bold">Contras:</p>
-                        <ul>
-                            <li>
-                                Inviável se houver muitos <kbd>Serviços de Negócio</kbd> (ou se são clientes)
-                            </li>
-                            <li>Pode criar gargalos no armazenamento</li>
-                        </ul>
-                    </section>
-                    <section data-auto-animate>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Revogação</h2>
-                        </header>
-                        <p class="fw-bold">Estratégia 3:</p>
-                        <p>
-                            Criar o JWT com um tempo de expiração muito curto (alguns minutos, por exemplo) e o
-                            <em>refresh token</em> com um tempo maior (uma semana ou mais)
-                        </p>
-                        <p>
-                            <span class="fw-bold">Prós:</span> toda a estratégia fica centralizada no <kbd>Servidor de
-                            autenticação</kbd>
-                        </p>
-                        <p>
-                            <span class="fw-bold">Contras:</span> o usuário poderá acessar recursos até o tempo de
-                            expiração do <em>token</em>
-                        </p>
-                    </section>
-                    <section>
-                        <header>
-                            <h1>Boas práticas</h1>
-                            <h2>Em microsserviços</h2>
-                        </header>
-                        <ul>
-                            <li>
-                                Sempre valide o <em>token</em> em seu <kbd>API Gateway</kbd> primeiro
-                                <ul>
-                                    <li>
-                                        Se houver um erro, você nem precisará encaminhar a requisição para seus
-                                        microsserviços
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>Cada microsserviço deve fazer sua própria validação das <em>claims</em></li>
-                        </ul>
-                    </section>
-                    <section data-auto-animate>
                         <header>
                             <h1>Boas práticas</h1>
                             <h2>Outras dicas</h2>
@@ -1071,6 +938,24 @@
                     </section>
                 </section> <!-- Materiais -->
 
+                <section>
+                    <h2>Treinamentos in company</h2>
+                    <div class="d-flex half-columns">
+                        <div style="line-height: 1.5">
+                            Gostou? Então conheça meus treinamentos corporativos e sob demanda sobre Desenvolvimento,
+                            Segurança da Informação, DevOps, Arquitetura de Sistemas e diversos outros assuntos
+                        </div>
+                        <div class="text-center">
+                            <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener"
+                               class="d-block">
+                                <img src="img/qrcode-workshops.png" alt="Workshops" style="height: 300px">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener">
+                        bit.ly/vcampitelli-workshops
+                    </a>
+                </section>
 
                 <section> <!-- Obrigado -->
                     <h2 class="text-center">Obrigado!</h2>
@@ -1120,25 +1005,6 @@
                         </div>
                     </div>
                 </section> <!-- Obrigado -->
-
-                <section>
-                    <h2>Treinamentos in company</h2>
-                    <div class="d-flex half-columns">
-                        <div style="line-height: 1.5">
-                            Gostou? Então conheça meus treinamentos corporativos e sob demanda sobre Desenvolvimento,
-                            Segurança da Informação, DevOps, Arquitetura de Sistemas e diversos outros assuntos
-                        </div>
-                        <div class="text-center">
-                            <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener"
-                               class="d-block">
-                                <img src="img/qrcode-workshops.png" alt="Workshops" style="height: 300px">
-                            </a>
-                        </div>
-                    </div>
-                    <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener">
-                        bit.ly/vcampitelli-workshops
-                    </a>
-                </section>
             </div>
         </div>
 

@@ -43,7 +43,6 @@ section#first > h2 {
 
 /* Cabeçalhos */
 header {
-  /*display: flex;*/
   align-items: center;
   justify-content: start;
   margin: var(--r-heading-margin);
@@ -230,15 +229,12 @@ section > p:last-child {
 }
 
 /* Código */
-code {
-  font-size: 0.9em;
-}
 code.font-size-sm {
-  font-size: 0.75em;
+  font-size: 0.85em;
+  line-height: 1.3;
 }
 code.font-size-xs {
-  font-size: 0.45em;
-  line-height: 0.1;
+  line-height: 0.2;
 }
 code.word-break {
   white-space: break-spaces !important;
