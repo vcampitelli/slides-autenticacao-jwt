@@ -37,10 +37,10 @@
 
                 <section> <!-- Sobre mim -->
                     <section data-auto-animate>
-                        <h2>Sobre mim</h2>
+                        <h1>Sobre mim</h1>
                     </section>
                     <section data-auto-animate>
-                        <h2>Sobre mim</h2>
+                        <h1>Sobre mim</h1>
                         <div id="about-me">
                             <div class="text-center">
                                 <img src="img/profile.jpg" alt="Vinícius Campitelli" id="profile-pic">
@@ -106,32 +106,32 @@
                         <h1>Framework JOSE</h1>
                         <p>
                             <span class="fs-italic"><b>J</b>SON <b>O</b>bject <b>S</b>igning and <b>E</b>ncryption</span>
-                            é um conjunto de regras para padronizar algumas representações utilizando o formato JSON:
+                            é um conjunto para padronizar algumas representações utilizando o formato JSON:
                         </p>
                         <ul class="margin-sm font-size-sm">
-                            <li class="fragment">
+                            <li>
                                 <a href="https://www.rfc-editor.org/rfc/rfc7515" target="_blank" rel="noopener">
                                     RFC 7515</a>: Objetos Protegidos com Integridade <em>(JSON Web Signatures - JWS)</em>
                             </li>
-                            <li class="fragment">
+                            <li>
                                 <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener">
                                     RFC 7516</a>: Objetos Criptografados <em>(JSON Web Encryption - JWE)</em>
                             </li>
-                            <li class="fragment">
+                            <li>
                                 <a href="https://www.rfc-editor.org/rfc/rfc7517" target="_blank" rel="noopener">
                                     RFC 7517</a>: Representações de Chaves <em>(JSON Web Key - JWK)</em>
                             </li>
-                            <li class="fragment">
+                            <li>
                                 <a href="https://www.rfc-editor.org/rfc/rfc7518" target="_blank" rel="noopener">
                                     RFC 7518</a>: Definições de Algoritmos <em>(JSON Web Algorithms - JWA)</em>
                             </li>
-                            <li class="fragment">
-                                <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener">
-                                    RFC 7519</a>: JSON Web Token <em>(JWT)</em>
-                            </li>
-                            <li class="fragment">
+                            <li>
                                 <a href="https://www.rfc-editor.org/rfc/rfc7520" target="_blank" rel="noopener">
                                     RFC 7520</a>: Vetores de Teste dos Padrões acima
+                            </li>
+                            <li>
+                                <a href="https://www.rfc-editor.org/rfc/rfc7519" target="_blank" rel="noopener">
+                                    RFC 7519</a>: JSON Web Token <em>(JWT)</em>
                             </li>
                         </ul>
                         <a href="https://datatracker.ietf.org/wg/jose/charter/" target="_blank" rel="noopener"
@@ -197,7 +197,7 @@
                             <h2>JWT</h2>
                         </header>
                         <p>Exemplo de um JWT:</p>
-                        <div class="word-break line-height-sm mb-3">
+                        <div class="word-break line-height-sm mb-4">
                             <code class="color-link font-size-sm">
                                 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0.wgF5eAdmH3lUpnjYvm2yhbF6RYtr1uiQUCtf-s62W9M
                             </code>
@@ -216,14 +216,15 @@
                             <h2>JWT: Prós</h2>
                         </header>
                         <ul class="margin">
-                            <li class="fragment">
+                            <li>
                                 Maneira <em>(relativamente)</em> segura para trocar informações de
                                 autenticação e autorização
                             </li>
-                            <li class="fragment">
-                                Gerenciamento de sessão <em>stateless</em>, pois o <em>token</em> é auto-contido
+                            <li>
+                                Gerenciamento de sessão <em>stateless</em>, já que o
+                                <em>token</em> é auto-contido
                             </li>
-                            <li class="fragment">
+                            <li>
                                 Diminui gargalo no <kbd>Serviço de Autenticação</kbd>, já que os outros serviços são
                                 capazes de validar o <em>token</em> sem acessá-lo
                             </li>
@@ -235,22 +236,26 @@
                             <h2>JWT: Contras</h2>
                         </header>
                         <ul class="margin">
-                            <li class="fragment">
+                            <li>
                                 Se a aplicação é um monolito
                             </li>
-                            <li class="fragment">
+                            <li>
                                 Maior complexidade para lidar com revogação de <em>tokens</em>
                             </li>
-                            <li class="fragment">
+                            <li>
                                 Pode se tornar muito grande, adicionando um grande <em>overhead</em> nas requisições ou
                                 até utilizando todo o espaço do <em>cookie</em> ou dos cabeçalhos HTTP
                             </li>
-                            <li class="fragment">
+                            <li>
+                                Necessita de mais cuidados de segurança tanto do <kbd>Serviço de Autenticação</kbd>
+                                quanto dos <kbd>Serviços de Negócio</kbd>
+                            </li>
+                            <li>
                                 Dificuldade em identificar usuários atualmente logados no sistema
                             </li>
-                            <li class="fragment">
-                                Por tudo isso, em alguns casos é mais recomendável usar <em>tokens</em> opacos e/ou a
-                                própria funcionalidade de sessões do <em>back-end</em>
+                            <li>
+                                Em alguns casos, é mais recomendável usar <em>tokens</em> opacos e/ou a própria
+                                funcionalidade de sessões do <em>back-end</em>
                             </li>
                         </ul>
                     </section>
@@ -280,8 +285,7 @@
                             <h1>Framework JOSE</h1>
                             <h2>JWS</h2>
                         </header>
-                        <p>Estrutura de um JWT utilizando JWS:</p>
-                        <pre class="mb-3"><code class="hljs color-default no-highlight word-break" data-trim
+                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break" data-trim
                                                 data-noescape>
                             <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9</span>.<span
                                 class="fragment highlight-green" data-fragment-index="1">eyJpc3MiOiJ2aW5pY2l1c2NhbXBpdGVsbGkuY29tIiwiYXVkIjoicGFsZXN0cmFzIiwic3ViIjoiYXV0ZW50aWNhY2FvLWp3dCIsImlhdCI6MTY4NzQyNzQwMH0</span>.<span
@@ -320,34 +324,44 @@
                             <h1>Framework JOSE</h1>
                             <h2>JWE</h2>
                         </header>
-                        <p>Estrutura de um JWT utilizando JWE:</p>
-                        <pre class="mb-3 custom fragment font-size-shrink" data-fragment-index="0"><code class="hljs color-default no-highlight word-break"
-                                                data-trim data-noescape>
-                            <span class="fragment highlight-blue" data-fragment-index="1">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
-                                class="fragment highlight-green" data-fragment-index="2">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
-                                class="fragment highlight-red" data-fragment-index="3">W8n4sxRmfroCN65Z</span>.<span
-                                class="fragment highlight-cyan custom" data-fragment-index="4">Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA</span>.<span
+                        <p>
+                            Em alguns casos, utiliza-se uma abordagem híbrida de criptografia: <b>Criptografia
+                            simétrica</b> para criptografar o <em>payload</em> e <b>Criptografia assimétrica</b> para
+                            cripotgrafar a <kbd>Chave simétrica</kbd>
+                        </p>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7516" target="_blank" rel="noopener"
+                           class="reference">RFC 7516</a>
+                    </section>
+                    <section data-auto-animate>
+                        <header>
+                            <h1>Framework JOSE</h1>
+                            <h2>JWE</h2>
+                        </header>
+                        <pre class="mb-4"><code class="hljs color-default no-highlight word-break font-size-sm" data-trim
+                                                data-noescape>
+                            <span class="fragment highlight-blue" data-fragment-index="0">eyJhbGciOiJFQ0RILUVTK0EyNTZLVyIsImVuYyI6IkEyNTZHQ00iLCJlcGsiOnsieCI6IlRubVZ5d2JLNjFNNktPU2gzbFlpZmpGdmoxajdLTTFTYjBsMUZ4VGVoQVUiLCJjcnYiOiJQLTI1NiIsImt0eSI6IkVDIiwieSI6Ik5TSWJFc0FCQmpwRGtpdXFjaUF0Z0tXQ1J5bEctSV9aOHZLemhXZ1pSY2sifX0</span>.<span
+                                class="fragment highlight-green" data-fragment-index="1">AshQJDAEbptscEvc3VuHzX_Ae3PsH3WFaGzKmA-QjcoJsziILktqKw</span>.<span
+                                class="fragment highlight-red" data-fragment-index="2">W8n4sxRmfroCN65Z</span>.<span
+                                class="fragment highlight-cyan custom" data-fragment-index="3">Ieg4R4SHVUoVHqHkQWccfsyRed8VT_-NtqxC0Io1dFHH8L-I3Bk-UdOPvwmO1hkBH3KCrcYgrFU-2hqb1E7fD3_DyPJ9uqBYhDrn1kpTxsTYnhX0z3DV1zPZAcHy9p6urytFMUV18k8huON0XA</span>.<span
                                 class="fragment highlight-violet custom"
-                                data-fragment-index="5">P6rEnI71xYgqhdxDDuj8jA</span>
+                                data-fragment-index="4">P6rEnI71xYgqhdxDDuj8jA</span>
                         </code></pre>
                         <div class="d-grid half-columns">
-                            <span class="font-size-sm fragment color-blue" data-fragment-index="1">Cabeçalho</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="1"><code
+                            <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="0"><code
                                     class="javascript font-size-sm line-height-normal word-break" data-trim>
                                 base64url({"alg": "ECDH-ES+A256KW", "enc": "A256GCM", "epk": {"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
                             </code></pre>
-                            <span class="font-size-sm fragment color-green" data-fragment-index="2">Chave</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="2">
-                                <code class="javascript font-size-sm line-height-normal" data-trim>
-                                    base64url(encrypt(ephemeralKey, privateKey))
-                                </code>
+                            <span class="font-size-sm fragment color-green" data-fragment-index="1">Chave</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="1">
+                                <code class="javascript font-size-sm line-height-normal" data-trim>base64url(key)</code>
                             </pre>
-                            <span class="font-size-sm fragment color-red" data-fragment-index="3">IV</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="3">
+                            <span class="font-size-sm fragment color-red" data-fragment-index="2">IV</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="2">
                                 <code class="javascript font-size-sm line-height-normal" data-trim>base64url(iv)</code>
                             </pre>
-                            <span class="font-size-sm fragment color-cyan" data-fragment-index="4">Corpo</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="4">
+                            <span class="font-size-sm fragment color-cyan" data-fragment-index="3">Corpo</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="3">
                                 <code class="javascript font-size-sm line-height-normal" data-trim>
                                     base64url(encrypt({
                                       "iat": 1687136586,
@@ -357,8 +371,8 @@
                                       "exp": 1687140186
                                     }, key))
                             </code></pre>
-                            <span class="font-size-sm fragment color-violet" data-fragment-index="5">Tag</span>
-                            <pre class="fragment mx-0 my-1" data-fragment-index="5">
+                            <span class="font-size-sm fragment color-violet" data-fragment-index="4">Tag</span>
+                            <pre class="fragment mx-0 my-1" data-fragment-index="4">
                                 <code class="javascript font-size-sm line-height-normal" data-trim>base64url(tag)</code>
                             </pre>
                         </div>
@@ -608,32 +622,30 @@
                             <h1>Recomendações</h1>
                             <h2>Algoritmos</h2>
                         </header>
-                        <p class="fw-bold fragment">Para JWS:</p>
+                        <p class="fw-bold">Para JWS:</p>
                         <ul>
-                            <li class="fragment">
+                            <li>
                                 Se você possuir apenas <b>um</b> <kbd>Serviço de Negócio</kbd>, pode usar
                                 <code>HS256</code>
                                 <ul>
-                                    <li class="fragment">
+                                    <li>
                                         Senão, use <code>ES256</code> se disponível ou finalmente opte por
                                         <code>RS256</code>
                                     </li>
+                                    <li>
+                                        Utilize <a href="#jwks">JWKS</a> para expôr as chaves públicas
+                                    </li>
                                 </ul>
                             </li>
-                            <li class="fragment">
-                                Utilize <a href="#jwks">JWKS</a> para expôr suas chaves públicas
-                            </li>
-                            <li class="fragment"><span class="fragment custom font-size-grow">
+                            <li><span class="fragment custom font-size-grow">
                                 Garanta que não está aceitando <code>none</code>
                             </span></li>
                         </ul>
-                        <div class="fragment mt-3">
-                            <p class="fw-bold">Para JWE:</p>
-                            <ul>
-                                <li>Se disponível, <code>ECDH-ES</code></li>
-                                <li>Senão, <code>RSAES-OAEP</code></li>
-                            </ul>
-                        </div>
+                        <p class="fw-bold">Para JWE:</p>
+                        <ul>
+                            <li>Se disponível, <code>ECDH-ES</code></li>
+                            <li>Senão, <code>RSAES-OAEP</code></li>
+                        </ul>
                     </section>
                     <section>
                         <header>
@@ -642,18 +654,18 @@
                         </header>
                         <p>Recomendações mínimas para cada algoritmo:</p>
                         <ul class="margin-sm font-size-sm">
-                            <li class="fragment">
+                            <li>
                                 Funções de <em>hashing</em> <span class="font-size-sm">(HS256, HS384 ou HS512)</span>:
                                 respeite o pedido do algoritmo (256, 384 ou 512 bits) e utilize boa entropia
                             </li>
-                            <li class="fragment">
+                            <li>
                                 Chaves RSA: o mínimo recomendável é de 2048 bits
                             </li>
-                            <li class="fragment">
+                            <li>
                                 Chaves de Curva Elíptica (EC): utilize o algoritmo <em>prime256v1</em>
                             </li>
                         </ul>
-                        <p class="fragment">
+                        <p>
                             Em todos os casos, crie uma política de <b>Rotação de chaves</b>!
                         </p>
                         <a href="https://programmerall.com/article/4483729988/" target="_blank" rel="noopener"
@@ -668,11 +680,11 @@
                             Outro tipo de <em>token</em> enviado junto com o <kbd>access token</kbd> que possui a
                             principal funcionalidade de <b>diminuir a superfície de ataque</b>
                         </p>
-                        <p class="fragment">
+                        <p>
                             Deve ser utilizado para receber um novo <kbd>access token</kbd> após sua expiração e ser
                             usado somente uma única vez
                         </p>
-                        <p class="fragment">
+                        <p>
                             Com isso, é possível ter JWTs com um tempo de expiração curto para aumentar a segurança
                         </p>
                         <a href="https://auth0.com/blog/refresh-tokens-what-are-they-and-when-to-use-them/"
@@ -716,7 +728,7 @@
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em Aplicações Web:</p>
+                        <p class="fw-bold">Em aplicações Web:</p>
                         <p>
                             <span class="fw-bold">Estratégia 1:</span> guardar o <em>token</em> somente em memória em
                             seu código JavaScript, podendo também utilizar <a
@@ -734,7 +746,7 @@
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em Aplicações Web:</p>
+                        <p class="fw-bold">Em aplicações Web:</p>
                         <p>
                             <span class="fw-bold">Estratégia 2:</span> utilizar <code>Cookie</code> (e não <code>LocalStorage</code>)
                             com as <span class="fs-italic">flags</span>:
@@ -757,7 +769,7 @@
                             <h2>Onde guardar?</h2>
                         </header>
 
-                        <p class="fw-bold">Em Aplicações Mobile:</p>
+                        <p class="fw-bold">Em aplicações Mobile:</p>
                         <p>
                             Guarde o <em>token</em> no armazenamento seguro específico da plataforma ou biblioteca, por
                             exemplo:
@@ -933,7 +945,7 @@
                             </li>
                         </ul>
                     </section>
-                    <section data-auto-animate>
+                    <section>
                         <header>
                             <h1>Recomendações</h1>
                             <h2>Outras dicas</h2>
@@ -1120,6 +1132,24 @@
                     </section>
                 </section> <!-- Materiais -->
 
+                <section>
+                    <h2>Treinamentos in company</h2>
+                    <div class="d-flex half-columns">
+                        <div style="line-height: 1.5">
+                            Gostou? Então conheça meus treinamentos corporativos e sob demanda sobre Desenvolvimento,
+                            Segurança da Informação, DevOps, Arquitetura de Sistemas e diversos outros assuntos
+                        </div>
+                        <div class="text-center">
+                            <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener"
+                               class="d-block">
+                                <img src="img/qrcode-workshops.png" alt="Workshops" style="height: 300px">
+                            </a>
+                        </div>
+                    </div>
+                    <a href="https://bit.ly/vcampitelli-workshops" target="_blank" rel="noopener">
+                        bit.ly/vcampitelli-workshops
+                    </a>
+                </section>
 
                 <section> <!-- Obrigado -->
                     <h2 class="text-center">Obrigado!</h2>
@@ -1169,25 +1199,6 @@
                         </div>
                     </div>
                 </section> <!-- Obrigado -->
-
-                <section>
-                    <h2>Treinamentos in company</h2>
-                    <div class="d-flex half-columns">
-                        <div style="line-height: 1.5">
-                            Gostou? Então conheça meus treinamentos corporativos e sob demanda sobre Desenvolvimento,
-                            Segurança da Informação, DevOps, Arquitetura de Sistemas e diversos outros assuntos
-                        </div>
-                        <div class="text-center">
-                            <a href="https://bit.ly/vcampitelli" target="_blank" rel="noopener"
-                               class="d-block">
-                                <img src="img/qrcode-workshops.png" alt="Workshops" style="height: 300px">
-                            </a>
-                        </div>
-                    </div>
-                    <a href="https://bit.ly/vcampitelli" target="_blank" rel="noopener">
-                        bit.ly/vcampitelli
-                    </a>
-                </section>
             </div>
         </div>
 
@@ -1196,16 +1207,13 @@
         <script src="reveal.js/plugin/notes/notes.js"></script>
         <script>
             document.querySelectorAll('img.insert-svg').forEach(($img) => {
-                fetch($img.src).then(response => {
-                    if (!response.ok) {
-                        return;
-                    }
-                    response.text().then(contents => {
+                fetch($img.src)
+                    .then(response => response.text())
+                    .then(contents => {
                         const $wrapper = document.createElement('div');
                         $wrapper.innerHTML = contents.replace('<?xml version="1.0" encoding="UTF-8"?>', '');
                         $img.parentNode.replaceChild($wrapper, $img);
                     });
-                });
             });
             Reveal.initialize({
                 hash: true,
