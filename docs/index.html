@@ -350,7 +350,7 @@
                             <span class="font-size-sm fragment color-blue" data-fragment-index="0">Cabeçalho</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="0"><code
                                     class="javascript font-size-sm line-height-normal word-break" data-trim>
-                                base64url({"alg": "ECDH-ES+A256KW", "enc": "A256GCM", "epk": {"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
+                                base64url({"alg":"ECDH-ES+A256KW","enc":"A256GCM","epk":{"x":"TnmVywbK61M6KOSh3lYifjFvj1j7KM1Sb0l1FxTehAU","crv":"P-256","kty":"EC","y":"NSIbEsABBjpDkiuqciAtgKWCRylG-I_Z8vKzhWgZRck"}})
                             </code></pre>
                             <span class="font-size-sm fragment color-green" data-fragment-index="1">Chave</span>
                             <pre class="fragment mx-0 my-1" data-fragment-index="1">
@@ -425,7 +425,7 @@
                                 </tr>
                                 <tr>
                                     <td><code class="fragment semi-fade-out" data-fragment-index="0">none</code></td>
-                                    <td class="font-size-sm fragment strike">
+                                    <td class="font-size-sm fragment strike highlight-red" data-fragment-index="0">
                                         Sem assinatura digital ou MAC
                                         <span class="fragment" data-fragment-index="0">⚠</span>️
                                     </td>
@@ -637,9 +637,9 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><span class="fragment custom font-size-grow">
-                                Garanta que não está aceitando <code>none</code>
-                            </span></li>
+                            <li>
+                                <span>⚠</span>️ Garanta que não está aceitando <code>none</code>
+                            </li>
                         </ul>
                         <p class="fw-bold">Para JWE:</p>
                         <ul>
@@ -691,21 +691,21 @@
                            target="_blank" rel="noopener" class="reference">Auth0: What Are Refresh Tokens and How to
                             Use Them Securely</a>
                     </section>
-                    <section>
+                    <section data-auto-animate data-auto-animate-restart>
                         <header>
                             <h1>Recomendações</h1>
-                            <h2>Expiração / Revogação</h2>
+                            <h2>Expiração</h2>
                         </header>
-                        <p class="fw-bold">Para Comunicação Entre Serviços:</p>
+                        <p class="fw-bold">Para Comunicação entre Serviços:</p>
                         <p>
                             Utilize um tempo de expiração bastante curto (por exemplo, 15 minutos), fazendo com que o
                             serviço cliente deva frequentemente reautenticar-se
                         </p>
                     </section>
-                    <section>
+                    <section data-auto-animate>
                         <header>
                             <h1>Recomendações</h1>
-                            <h2>Expiração / Revogação</h2>
+                            <h2>Expiração</h2>
                         </header>
                         <p class="fw-bold">Para Usuários:</p>
                         <p>
@@ -722,7 +722,7 @@
                         </p>
                         <p class="fragment font-size-sm"><em>* Defina esses tempos com sua equipe de Produto/UX</em></p>
                     </section>
-                    <section data-auto-animate>
+                    <section data-auto-animate data-auto-animate-restart>
                         <header>
                             <h1>Recomendações</h1>
                             <h2>Onde guardar?</h2>
@@ -763,7 +763,7 @@
                             Auth0: Token Storage
                         </a>
                     </section>
-                    <section>
+                    <section data-auto-animate>
                         <header>
                             <h1>Recomendações</h1>
                             <h2>Onde guardar?</h2>
@@ -848,7 +848,7 @@
                             <li>Pode criar gargalos no armazenamento</li>
                         </ul>
                     </section>
-                    <section data-auto-animate data-auto-animate-restart>
+                    <section data-auto-animate>
                         <header>
                             <h1>Recomendações</h1>
                             <h2>Revogação</h2>
